@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Observability Viewer</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
 
@@ -73,7 +75,11 @@ td > div {
 td > div::-webkit-scrollbar { height: 6px; }
 td > div::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.2); border-radius: 3px; }
 td > div::-webkit-scrollbar-track { background: rgba(0,0,0,0.05); }
-
+thead th {
+  top: -12px; /* ajusta conforme a altura real do header + legenda */
+  background: #f0f2f5;
+  z-index: 95;
+}
 /* Página row */
 .page-row td { background: #0a3d62; color: #fff; font-weight: bold; font-size: 16px; padding: 12px; }
 
@@ -90,6 +96,18 @@ button:hover { background: #065182; }
 .modal-content pre { white-space: pre-wrap; word-break: break-word; background: #f4f4f4; padding: 12px; border-radius: 6px; max-height: 300px; overflow-y: auto; }
 .modal-close { position: absolute; top: 10px; right: 15px; cursor: pointer; font-size: 20px; font-weight: bold; color: #333; }
 .modal-close:hover { color: #0a3d62; }
+#exportBtn {
+  display: none;
+  margin-left: 10px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: none;
+  background: #234376;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+#exportBtn:hover { background: #065182; }
 </style>
 </head>
 <body>
@@ -101,6 +119,7 @@ button:hover { background: #065182; }
 
 <div class="container">
   <input type="file" id="fileInput" accept=".csv,.txt,.log">
+  <button id="exportBtn"  onclick="exportTableToExcel('tabela-clientes', 'obs-viewer.xlsx')">Export CSV</button>
 
   <div class="legend">
     <div class="legend-item"><div class="legend-color engage"></div> Engage</div>
@@ -139,6 +158,8 @@ document.getElementById("fileInput").addEventListener("change", function(e) {
   const file = e.target.files[0]; if (!file) return;
   const reader = new FileReader();
   reader.onload = function(event) {
+    document.getElementById("exportBtn").style.display = "inline-block";
+
     const lines = event.target.result.split(/\r?\n/); const rows = [];
     lines.forEach(rawLine => {
       const line = rawLine.trim();
@@ -169,7 +190,7 @@ document.getElementById("fileInput").addEventListener("change", function(e) {
     if (rows.length === 0) { document.getElementById("tableContainer").innerHTML = "<p>Nenhuma linha válida encontrada.</p>"; return; }
 
     const allParams = [...new Set(rows.flatMap(r => r.params ? Object.keys(r.params) : []))];
-    let html = "<table><thead><tr><th><div>Data/Hora</div></th><th><div>URL</div></th>";
+    let html = "<table id='tabela-clientes'><thead><tr><th><div>Time</div></th><th><div>URL</div></th>";
     allParams.forEach(p => { html += `<th><div>${p}</div></th>`; });
     html += "</tr></thead><tbody>";
 
@@ -213,8 +234,20 @@ document.getElementById("fileInput").addEventListener("change", function(e) {
     window.onclick = (event) => { if(event.target == modal) modal.style.display = "none"; };
   };
   reader.readAsText(file);
+
 });
+  function exportTableToExcel(tableID, filename = 'tabela.xlsx') {
+  const table = document.getElementById(tableID);
+  if (!table) {
+    console.error("Tabela não encontrada:", tableID);
+    return;
+  }
+
+  let wb = XLSX.utils.table_to_book(table, { sheet: "Sheet1" });
+  XLSX.writeFile(wb, filename);
+}
 </script>
+
 
 </body>
 </html>
