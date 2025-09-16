@@ -1,0 +1,6101 @@
+{
+  "siteName": "Lojas Renner UY",
+  "siteId": 1781,
+  "siteAPIkey": "44c94ad5598c8afd",
+  "clientAPIkeys": [
+    {
+      "name": "catalogupdate-api",
+      "clientKey": "de5f1357b1c5b445"
+    },
+    {
+      "name": "app",
+      "clientKey": "6a5ce2e6664c174d"
+    },
+    {
+      "name": "Discover",
+      "clientKey": "ab656cedfab9f13d"
+    },
+    {
+      "name": "lojafisica",
+      "clientKey": "dbf81ace3d5ebe5e"
+    },
+    {
+      "name": "Dynamic XP",
+      "clientKey": "9339f4f7235dfc80"
+    },
+    {
+      "name": "web",
+      "clientKey": "e52314fe89d7fd9c"
+    }
+  ],
+  "placementsInt": [
+    {
+      "name": "home_page.verticalproducts_2",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.verticalproducts_1",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.verticalproducts_3",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "generic_page.departmentBeauty_Carrossel_01",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carrousel",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "generic_page.departmentBeauty_Carrossel_03",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carrousel",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "generic_page.departmentBeauty_Carrossel_02",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carrousel",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "generic_page.departmentBeauty_Carrossel_05",
+      "layouts": [
+        {
+          "name": "Carrossel Responsivo",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "generic_page.departmentBeauty_Carrossel_04",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carrousel",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "generic_page.departmentBeauty_card_01",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.web_bannerCarousel_P04",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "generic_page.departmentBeauty_Carrossel_06",
+      "layouts": [
+        {
+          "name": "Carrossel Responsivo",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "generic_page.departmentBeauty_card_03",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "generic_page.departmentBeauty_card_02",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.app_bannerCarousel_P04",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "generic_page.departmentBeauty_vitrineRecomendacao_02",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.lookbook_card_middle1",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Four Itens",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "generic_page.departmentBeauty_vitrineRecomendacao_01",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.lookbook_card_middle3",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Four Itens",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "generic_page.departmentBeauty_vitrineRecomendacao_03",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.lookbook_card_middle2",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Four Itens",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.lookbook_card_middle4",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Four Itens",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.banner_carousel_video1",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel Video",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.threeCTA_responsiveUY2",
+      "layouts": [
+        {
+          "name": "JSON - Banner - ThreeItems Responsive",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.threeCTA_responsiveUY1",
+      "layouts": [
+        {
+          "name": "JSON - Banner - ThreeItems Responsive",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "generic_page.teste_vitrineUY",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.threeCTA_responsiveUY3",
+      "layouts": [
+        {
+          "name": "JSON - Banner - CardCTA",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        },
+        {
+          "name": "JSON - Banner - ThreeItems Responsive",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.banner_carousel_video_mobile1",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel Video Mobile",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.three_responsiveUY2",
+      "layouts": [
+        {
+          "name": "JSON - Banner - ThreeItems Responsive",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.three_responsiveUY1",
+      "layouts": [
+        {
+          "name": "JSON - Banner - ThreeItems Responsive",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.threeVM_responsiveUY1",
+      "layouts": [
+        {
+          "name": "JSON - Banner - ThreeItems Responsive",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.three_responsiveUY3",
+      "layouts": [
+        {
+          "name": "JSON - Banner - ThreeItems Responsive",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.threeVM_responsiveUY3",
+      "layouts": [
+        {
+          "name": "JSON - Banner - ThreeItems Responsive",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.web_bannerTab_nova1",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.threeVM_responsiveUY2",
+      "layouts": [
+        {
+          "name": "JSON - Banner - ThreeItems Responsive",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_mobile2",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens Mobile",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.web_bannerTab_nova3",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.web_bannerCarousel_nova4_teste",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_mobile1",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens Mobile",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.web_bannerTab_nova2",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.web_bannerCarousel_nova6_teste",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_mobile3",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens Mobile",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.web_bannerTab_nova4",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.web_bannerCarousel_nova5_teste",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "generic_page.vitrine_live",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.tabproducts_fem1",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.tabproducts_fem3",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.tabproducts_fem2",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.tabproducts_inf2",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.web_bannerCarousel_whatsapp",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.tabproducts_inf1",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "generic_page.departmentBeauty_card_01_mobile",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens Mobile",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.app_bannerCarousel_whatsapp",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "generic_page.departmentBeauty_card_03_mobile",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens Mobile",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "generic_page.departmentBeauty_card_02_mobile",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens Mobile",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "generic_page.departmentBeauty_Carrossel_02_mobile",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel Mobile",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "generic_page.departmentBeauty_Carrossel_01_mobile",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel Mobile",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "generic_page.departmentBeauty_Carrossel_04_mobile",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel Mobile",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "generic_page.departmentBeauty_Carrossel_03_mobile",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel Mobile",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.bannerCarousel_responsive5",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel Responsive",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "item_page.novoapp_vitrinerec_1",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        },
+        {
+          "name": "JSON - Recomendacao de Produtos com Produto Seed",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "cart_page.novoapp_vitrinerec_2",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "cart_page.novoapp_vitrinerec_1",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.lifestyle_card_middle2",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Four Itens",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.lifestyle_card_middle1",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Four Itens",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.lifestyle_card_middle4",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Four Itens",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.lifestyle_card_middle3",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Four Itens",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_middle5",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_middle7",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_middle6",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_middle2CTA",
+      "layouts": [
+        {
+          "name": "JSON - Banner - CardCTA",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_middle1CTA",
+      "layouts": [
+        {
+          "name": "JSON - Banner - CardCTA",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_middle4CTA",
+      "layouts": [
+        {
+          "name": "JSON - Banner - CardCTA",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_middle3CTA",
+      "layouts": [
+        {
+          "name": "JSON - Banner - CardCTA",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_middle6CTA",
+      "layouts": [
+        {
+          "name": "JSON - Banner - CardCTA",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_middle5CTA",
+      "layouts": [
+        {
+          "name": "JSON - Banner - CardCTA",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_middle8",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.novajornada_vitrine_1",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "generic_page.vitrine_lp_outinv",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.tabproducts_10",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.web_bannerCarousel_nova10_teste",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "generic_page.vitrine_rennerplay",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.vm_bottom1",
+      "layouts": [
+        {
+          "name": "JSON - Banner - VM",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.vm_bottom3",
+      "layouts": [
+        {
+          "name": "JSON - Banner - VM",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.vm_bottom2",
+      "layouts": [
+        {
+          "name": "JSON - Banner - VM",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.novaJornada_bannerCarrossel1_resp",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.novaJornada_app_CarouselPrincipal1",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card3hmls1",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card3hmls3",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card3hmls2",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card3Mobhmls2",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens Mobile",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card3Mobhmls1",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens Mobile",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card3Mobhmls3",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens Mobile",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_top4",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Four Itens",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "category_page.discover_app",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.bannerWide_bottom",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Wide",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.bannerWide_top",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Wide",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.bannerCarouselImage",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carrousel",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.bannerCarousel_responsive1",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel Responsive",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.bannerCarousel_responsive3",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel Responsive",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.bannerCarousel_responsive2",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel Responsive",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.bannerCarousel_responsive4",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel Responsive",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.bannerCarousel_mobile2",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel Mobile",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.bannerCarousel_mobile1",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel Mobile",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.bannerCarousel_mobile3",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel Mobile",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_lps_CTA2",
+      "layouts": [
+        {
+          "name": "JSON - Banner - ThreeItems Responsive",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_lps_CTA1",
+      "layouts": [
+        {
+          "name": "JSON - Banner - ThreeItems Responsive",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_lps_CTA3",
+      "layouts": [
+        {
+          "name": "JSON - Banner - ThreeItems Responsive",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_lps_VM2",
+      "layouts": [
+        {
+          "name": "JSON - Banner - ThreeItems Responsive",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_lps_VM1",
+      "layouts": [
+        {
+          "name": "JSON - Banner - ThreeItems Responsive",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_lps_VM3",
+      "layouts": [
+        {
+          "name": "JSON - Banner - ThreeItems Responsive",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_lps_Responsive1",
+      "layouts": [
+        {
+          "name": "JSON - Banner - ThreeItems Responsive",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_lps_Responsive3",
+      "layouts": [
+        {
+          "name": "JSON - Banner - ThreeItems Responsive",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_lps_Responsive2",
+      "layouts": [
+        {
+          "name": "JSON - Banner - ThreeItems Responsive",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.bannerCarousel_mobile5",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel Mobile",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.bannerCarousel_mobile4",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel Mobile",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.teste_vitrineUY_hml1",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_middle10",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_middle9",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "generic_page.VITRINEPACO",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_mobile4",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens Mobile",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "cart_page.BRINDEVUELTACLASES",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_middle11",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_mobile6",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens Mobile",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_mobile5",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens Mobile",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_middle4",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "email_page.crm_ofertas",
+      "layouts": [
+        {
+          "name": "Recs_Email",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "item_page.vitrineRecomendacao_middle1",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "item_page.vitrineRecomendacao_middle2",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        },
+        {
+          "name": "JSON - Recomendacao de Produtos com Produto Seed",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "item_page.vitrineComplementar_middle",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        },
+        {
+          "name": "JSON - Recomendacao de Produtos com Produto Seed",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "cart_page.vitrineRecomendacao_bottom",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "cart_page.bannerStrip_top2",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Strip",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "cart_page.bannerStrip_bottom",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Strip",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.vitrineRecomendacao_middle1",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.vitrineRecomendacao_middle2",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.web_bannerCarousel_nova2_teste",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "generic_page.vitrine_wishlistvazia1",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.vitrineRecomendacao_bottom1",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.web_bannerCarousel_nova1_teste",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.vitrineRecomendacao_bottom2",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.app_bannerCarousel_nova1_teste",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.bannerCarousel1",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carrousel",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.web_bannerCarousel_nova3_teste",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "item_page.compre_junto",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.bannerCarousel2",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carrousel",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.app_bannerCarousel_nova3_teste",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.bannerCarousel3",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carrousel",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.app_bannerCarousel_nova2_teste",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.bannerCarousel4",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carrousel",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.bannerCarousel5",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carrousel",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_top1",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Four Itens",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_top2",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Four Itens",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_top3",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Four Itens",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_middle1",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_middle2",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "generic_page.vitrineRecomendacao_bottom",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_middle3",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "brand_page.vitrineRecomendacao_bottom",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.bannerStrip_middle",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Strip",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.bannerStrip_footer",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Strip",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "search_page.find_vitrineRecomendacao_middle",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "email_page.Recomenda_Email",
+      "layouts": [
+        {
+          "name": "Recs_Email",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "search_page.find_vitrineRecomendacao_bottom",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.app_bannerCarousel_nova2",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "search_page.noResults_vitrineRecomendacao_middle",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.app_bannerCarousel_nova1",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "search_page.noResults_vitrineRecomendacao_bottom",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.app_bannerCarousel_nova4",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "category_page.bannerWide_bottom",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Wide",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.app_bannerCarousel_nova3",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "category_page.vitrineRecomendacao_bottom1",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.app_bannerCarousel_nova6",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "category_page.vitrineRecomendacao_bottom2",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.app_bannerCarousel_nova5",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "category_page.vitrineRecomendacao_bottom3",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.app_bannerCarousel_nova8",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "error_page.vitrineRecomendacao_bottom",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.app_bannerCarousel_nova7",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "category_page.departmentKids_bannerWide_top",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens Mobile",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.app_bannerCarousel_nova10",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "category_page.departmentKids_BannerSwitch_middle",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.app_bannerCarousel_nova9",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "category_page.departmentKids_card_middle1",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Card",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_CTA2",
+      "layouts": [
+        {
+          "name": "JSON - Banner - CardCTA",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.web_bannerCarousel_nova2",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "category_page.departmentKids_card_middle2",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Card",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_CTA1",
+      "layouts": [
+        {
+          "name": "JSON - Banner - CardCTA",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.web_bannerCarousel_nova1",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "category_page.departmentKids_card_bottom3",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Card",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.web_bannerCarousel_nova4",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "category_page.departmentKids_bannerWide_bottom1",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens Mobile",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_CTA3",
+      "layouts": [
+        {
+          "name": "JSON - Banner - CardCTA",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.web_bannerCarousel_nova3",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "category_page.departmentKids_bannerWide_bottom2",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens Mobile",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.web_bannerCarousel_nova6",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "category_page.departmentKids_bannerWide_bottom3",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens Mobile",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.web_bannerCarousel_nova5",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "category_page.departmentKids_vitrineRecomendacao_bottom1",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.web_bannerCarousel_nova8",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "category_page.departmentKids_vitrineRecomendacao_bottom2",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.web_bannerCarousel_nova7",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.web_bannerCarousel_nova10",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "category_page.departmentBeauty_bannerWide_top1",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens Mobile",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.web_bannerCarousel_nova9",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "category_page.departmentBeauty_bannerWide_top2",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens Mobile",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "category_page.departmentBeauty_bannerWide_top3",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens Mobile",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "category_page.departmentBeauty_card_middle1",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Card",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "category_page.departmentBeauty_card_middle2",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Card",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "generic_page.placement_teste_vitrineUY",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.verticalproducts_topsellers",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "category_page.departmentBeauty_card_middle3",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Card",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "purchase_complete_page.vitrineRecomendacao_bottom",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "category_page.departmentBeauty_card_bottom1",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Card",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "category_page.departmentBeauty_card_bottom2",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Card",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "email_page.rr1",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "category_page.departmentBeauty_card_bottom3",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Card",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "category_page.discover",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "category_page.departmentBeauty_bannerWide_bottom1",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens Mobile",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "search_page.find",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "category_page.departmentBeauty_bannerWide_bottom2",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens Mobile",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "category_page.departmentBeauty_bannerWide_bottom3",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens Mobile",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "category_page.departmentBeauty_vitrineRecomendacao_bottom1",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "category_page.departmentBeauty_vitrineRecomendacao_bottom2",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "search_page.suggestions",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "item_page.app_vitrineRecomendacao_bottom1",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        },
+        {
+          "name": "JSON - Recomendacao de Produtos com Produto Seed",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "item_page.app_vitrineRecomendacao_bottom2",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        },
+        {
+          "name": "JSON - Recomendacao de Produtos com Produto Seed",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "item_page.app_vitrineComplementar_middle",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        },
+        {
+          "name": "JSON - Recomendacao de Produtos com Produto Seed",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "cart_page.app_vitrineRecomendacao_bottom",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "cart_page.app_bannerStrip_bottom",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Strip",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.app_bannerCarousel1",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carrousel",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "cart_page.vitrineRecomendacao_bottom_embalagem",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.app_bannerCarousel2",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carrousel",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.app_bannerCarousel3",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carrousel",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.app_bannerCarousel4",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carrousel",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "cart_page.vitrineRecomendacao_bottom_caixa",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "email_page.similar_bests",
+      "layouts": [
+        {
+          "name": "Recs_Email",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.app_bannerCarousel5",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carrousel",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.app_card1",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Card",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "category_page.vitrineRecomendacao_top",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "cart_page.promoDDN",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.app_card2",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Card",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.app_card3",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Card",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.app_card4",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Card",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.app_card5",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Card",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.app_card6",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Card",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.app_bannerWide_middle1",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens Mobile",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.vitrineRecomendacao_cont1",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.app_bannerWide_middle2",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens Mobile",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.app_bannerWide_middle3",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens Mobile",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.app_vitrineRecomendacao_bottom1",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "cart_page.BRINDENATAL",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.app_vitrineRecomendacao_bottom2",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.app_vitrineRecomendacao_bottom3",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.app_vitrineRecomendacao_bottom4",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.app_bannerStrip_bottom",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Strip",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "search_page.app_bannerStrip_top",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Strip",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "search_page.app_vitrineRecomendacao_middle",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.tabproducts_1",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "search_page.app_vitrineRecomendacao_bottom",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "search_page.app_bannerWide_middle",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens Mobile",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.tabproducts_3",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "category_page.app_vitrineRecomendacao_top",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.tabproducts_2",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "error_page.app_vitrineRecomendacao_bottom",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.tabproducts_5",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "error_page.app_bannerWide_middle",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.tabproducts_4",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "search_page.bannerCarousel1",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel Mobile",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        },
+        {
+          "name": "JSON - Banner - Carrousel",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "search_page.bannerCarousel2",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel Mobile",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        },
+        {
+          "name": "JSON - Banner - Carrousel",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "search_page.bannerStrip_middle",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Strip",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    }
+  ],
+  "placementsProd": [
+    {
+      "name": "home_page.verticalproducts_2",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.verticalproducts_1",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.verticalproducts_3",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "generic_page.departmentBeauty_Carrossel_01",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carrousel",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "generic_page.departmentBeauty_Carrossel_03",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carrousel",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "generic_page.departmentBeauty_Carrossel_02",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carrousel",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "generic_page.departmentBeauty_Carrossel_05",
+      "layouts": [
+        {
+          "name": "Carrossel Responsivo",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "generic_page.departmentBeauty_Carrossel_04",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carrousel",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "generic_page.departmentBeauty_card_01",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.web_bannerCarousel_P04",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "generic_page.departmentBeauty_Carrossel_06",
+      "layouts": [
+        {
+          "name": "Carrossel Responsivo",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "generic_page.departmentBeauty_card_03",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "generic_page.departmentBeauty_card_02",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.app_bannerCarousel_P04",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "generic_page.departmentBeauty_vitrineRecomendacao_02",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.lookbook_card_middle1",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Four Itens",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "generic_page.departmentBeauty_vitrineRecomendacao_01",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.lookbook_card_middle3",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Four Itens",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "generic_page.departmentBeauty_vitrineRecomendacao_03",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.lookbook_card_middle2",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Four Itens",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.lookbook_card_middle4",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Four Itens",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.banner_carousel_video1",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel Video",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.threeCTA_responsiveUY2",
+      "layouts": [
+        {
+          "name": "JSON - Banner - ThreeItems Responsive",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.threeCTA_responsiveUY1",
+      "layouts": [
+        {
+          "name": "JSON - Banner - ThreeItems Responsive",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "generic_page.teste_vitrineUY",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.threeCTA_responsiveUY3",
+      "layouts": [
+        {
+          "name": "JSON - Banner - CardCTA",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        },
+        {
+          "name": "JSON - Banner - ThreeItems Responsive",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.banner_carousel_video_mobile1",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel Video Mobile",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.three_responsiveUY2",
+      "layouts": [
+        {
+          "name": "Cards Responsivo",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        },
+        {
+          "name": "JSON - Banner - ThreeItems Responsive",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.three_responsiveUY1",
+      "layouts": [
+        {
+          "name": "Cards Responsivo",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        },
+        {
+          "name": "JSON - Banner - ThreeItems Responsive",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.threeVM_responsiveUY1",
+      "layouts": [
+        {
+          "name": "Cards Responsivo",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        },
+        {
+          "name": "JSON - Banner - ThreeItems Responsive",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.three_responsiveUY3",
+      "layouts": [
+        {
+          "name": "Cards Responsivo",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        },
+        {
+          "name": "JSON - Banner - ThreeItems Responsive",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.threeVM_responsiveUY3",
+      "layouts": [
+        {
+          "name": "Cards Responsivo",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        },
+        {
+          "name": "JSON - Banner - ThreeItems Responsive",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.web_bannerTab_nova1",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.threeVM_responsiveUY2",
+      "layouts": [
+        {
+          "name": "Cards Responsivo",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        },
+        {
+          "name": "JSON - Banner - ThreeItems Responsive",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_mobile2",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens Mobile",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.web_bannerTab_nova3",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.web_bannerCarousel_nova4_teste",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_mobile1",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens Mobile",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.web_bannerTab_nova2",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.web_bannerCarousel_nova6_teste",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_mobile3",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens Mobile",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.web_bannerTab_nova4",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.web_bannerCarousel_nova5_teste",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "generic_page.vitrine_live",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.tabproducts_fem1",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.tabproducts_fem3",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.tabproducts_fem2",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.tabproducts_inf2",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.web_bannerCarousel_whatsapp",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.tabproducts_inf1",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "generic_page.departmentBeauty_card_01_mobile",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens Mobile",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.app_bannerCarousel_whatsapp",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "generic_page.departmentBeauty_card_03_mobile",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens Mobile",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "generic_page.departmentBeauty_card_02_mobile",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens Mobile",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "generic_page.departmentBeauty_Carrossel_02_mobile",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel Mobile",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "generic_page.departmentBeauty_Carrossel_01_mobile",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel Mobile",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "generic_page.departmentBeauty_Carrossel_04_mobile",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel Mobile",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "generic_page.departmentBeauty_Carrossel_03_mobile",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel Mobile",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.bannerCarousel_responsive5",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel Responsive",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "item_page.novoapp_vitrinerec_1",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        },
+        {
+          "name": "JSON - Recomendacao de Produtos com Produto Seed",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "cart_page.novoapp_vitrinerec_2",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "cart_page.novoapp_vitrinerec_1",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.lifestyle_card_middle2",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Four Itens",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.lifestyle_card_middle1",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Four Itens",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.lifestyle_card_middle4",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Four Itens",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.lifestyle_card_middle3",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Four Itens",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_middle5",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_middle7",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_middle6",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_middle2CTA",
+      "layouts": [
+        {
+          "name": "JSON - Banner - CardCTA",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_middle1CTA",
+      "layouts": [
+        {
+          "name": "JSON - Banner - CardCTA",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_middle4CTA",
+      "layouts": [
+        {
+          "name": "JSON - Banner - CardCTA",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_middle3CTA",
+      "layouts": [
+        {
+          "name": "JSON - Banner - CardCTA",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_middle6CTA",
+      "layouts": [
+        {
+          "name": "JSON - Banner - CardCTA",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_middle5CTA",
+      "layouts": [
+        {
+          "name": "JSON - Banner - CardCTA",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_middle8",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.novajornada_vitrine_1",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "generic_page.vitrine_lp_outinv",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.tabproducts_10",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.web_bannerCarousel_nova10_teste",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "generic_page.vitrine_rennerplay",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.vm_bottom1",
+      "layouts": [
+        {
+          "name": "JSON - Banner - VM",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.vm_bottom3",
+      "layouts": [
+        {
+          "name": "JSON - Banner - VM",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.vm_bottom2",
+      "layouts": [
+        {
+          "name": "JSON - Banner - VM",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.novaJornada_bannerCarrossel1_resp",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.novaJornada_app_CarouselPrincipal1",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card3hmls1",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card3hmls3",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card3hmls2",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card3Mobhmls2",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens Mobile",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card3Mobhmls1",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens Mobile",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card3Mobhmls3",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens Mobile",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_top4",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Four Itens",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "category_page.discover_app",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.bannerWide_bottom",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Wide",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.bannerWide_top",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Wide",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.bannerCarouselImage",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carrousel",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.bannerCarousel_responsive1",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel Responsive",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.bannerCarousel_responsive3",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel Responsive",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.bannerCarousel_responsive2",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel Responsive",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.bannerCarousel_responsive4",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel Responsive",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.bannerCarousel_mobile2",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel Mobile",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.bannerCarousel_mobile1",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel Mobile",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.bannerCarousel_mobile3",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel Mobile",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_lps_CTA2",
+      "layouts": [
+        {
+          "name": "JSON - Banner - ThreeItems Responsive",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_lps_CTA1",
+      "layouts": [
+        {
+          "name": "JSON - Banner - ThreeItems Responsive",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_lps_CTA3",
+      "layouts": [
+        {
+          "name": "JSON - Banner - ThreeItems Responsive",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_lps_VM2",
+      "layouts": [
+        {
+          "name": "JSON - Banner - ThreeItems Responsive",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_lps_VM1",
+      "layouts": [
+        {
+          "name": "JSON - Banner - ThreeItems Responsive",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_lps_VM3",
+      "layouts": [
+        {
+          "name": "JSON - Banner - ThreeItems Responsive",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_lps_Responsive1",
+      "layouts": [
+        {
+          "name": "JSON - Banner - ThreeItems Responsive",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_lps_Responsive3",
+      "layouts": [
+        {
+          "name": "JSON - Banner - ThreeItems Responsive",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_lps_Responsive2",
+      "layouts": [
+        {
+          "name": "JSON - Banner - ThreeItems Responsive",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.bannerCarousel_mobile5",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel Mobile",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.bannerCarousel_mobile4",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel Mobile",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.teste_vitrineUY_hml1",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_middle10",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_middle9",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "generic_page.VITRINEPACO",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_mobile4",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens Mobile",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "cart_page.BRINDEVUELTACLASES",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_middle11",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_mobile6",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens Mobile",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_mobile5",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens Mobile",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_middle4",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "email_page.crm_ofertas",
+      "layouts": [
+        {
+          "name": "Recs_Email",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "item_page.vitrineRecomendacao_middle1",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "item_page.vitrineRecomendacao_middle2",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        },
+        {
+          "name": "JSON - Recomendacao de Produtos com Produto Seed",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "item_page.vitrineComplementar_middle",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        },
+        {
+          "name": "JSON - Recomendacao de Produtos com Produto Seed",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "cart_page.vitrineRecomendacao_bottom",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "cart_page.bannerStrip_top2",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Strip",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "cart_page.bannerStrip_bottom",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Strip",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.vitrineRecomendacao_middle1",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.vitrineRecomendacao_middle2",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.web_bannerCarousel_nova2_teste",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "generic_page.vitrine_wishlistvazia1",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.vitrineRecomendacao_bottom1",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.web_bannerCarousel_nova1_teste",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.vitrineRecomendacao_bottom2",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.app_bannerCarousel_nova1_teste",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.bannerCarousel1",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carrousel",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.web_bannerCarousel_nova3_teste",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "item_page.compre_junto",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.bannerCarousel2",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carrousel",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.app_bannerCarousel_nova3_teste",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.bannerCarousel3",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carrousel",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.app_bannerCarousel_nova2_teste",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.bannerCarousel4",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carrousel",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.bannerCarousel5",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carrousel",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_top1",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Four Itens",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_top2",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Four Itens",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_top3",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Four Itens",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_middle1",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_middle2",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "generic_page.vitrineRecomendacao_bottom",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_middle3",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "brand_page.vitrineRecomendacao_bottom",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.bannerStrip_middle",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Strip",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.bannerStrip_footer",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Strip",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "search_page.find_vitrineRecomendacao_middle",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "email_page.Recomenda_Email",
+      "layouts": [
+        {
+          "name": "Recs_Email",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "search_page.find_vitrineRecomendacao_bottom",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.app_bannerCarousel_nova2",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "search_page.noResults_vitrineRecomendacao_middle",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.app_bannerCarousel_nova1",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "search_page.noResults_vitrineRecomendacao_bottom",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.app_bannerCarousel_nova4",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "category_page.bannerWide_bottom",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Wide",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.app_bannerCarousel_nova3",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "category_page.vitrineRecomendacao_bottom1",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.app_bannerCarousel_nova6",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "category_page.vitrineRecomendacao_bottom2",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.app_bannerCarousel_nova5",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "category_page.vitrineRecomendacao_bottom3",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.app_bannerCarousel_nova8",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "error_page.vitrineRecomendacao_bottom",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.app_bannerCarousel_nova7",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "category_page.departmentKids_bannerWide_top",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens Mobile",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.app_bannerCarousel_nova10",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "category_page.departmentKids_BannerSwitch_middle",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.app_bannerCarousel_nova9",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "category_page.departmentKids_card_middle1",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Card",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_CTA2",
+      "layouts": [
+        {
+          "name": "JSON - Banner - CardCTA",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.web_bannerCarousel_nova2",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "category_page.departmentKids_card_middle2",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Card",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_CTA1",
+      "layouts": [
+        {
+          "name": "JSON - Banner - CardCTA",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.web_bannerCarousel_nova1",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "category_page.departmentKids_card_bottom3",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Card",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.web_bannerCarousel_nova4",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "category_page.departmentKids_bannerWide_bottom1",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens Mobile",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.card_CTA3",
+      "layouts": [
+        {
+          "name": "JSON - Banner - CardCTA",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.web_bannerCarousel_nova3",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "category_page.departmentKids_bannerWide_bottom2",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens Mobile",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.web_bannerCarousel_nova6",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "category_page.departmentKids_bannerWide_bottom3",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens Mobile",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.web_bannerCarousel_nova5",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "category_page.departmentKids_vitrineRecomendacao_bottom1",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.web_bannerCarousel_nova8",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "category_page.departmentKids_vitrineRecomendacao_bottom2",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.web_bannerCarousel_nova7",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.web_bannerCarousel_nova10",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "category_page.departmentBeauty_bannerWide_top1",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens Mobile",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.web_bannerCarousel_nova9",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel - Nova Jornada",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "category_page.departmentBeauty_bannerWide_top2",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens Mobile",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "category_page.departmentBeauty_bannerWide_top3",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens Mobile",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "category_page.departmentBeauty_card_middle1",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Card",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "category_page.departmentBeauty_card_middle2",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Card",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "generic_page.placement_teste_vitrineUY",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.verticalproducts_topsellers",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "category_page.departmentBeauty_card_middle3",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Card",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "purchase_complete_page.vitrineRecomendacao_bottom",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "category_page.departmentBeauty_card_bottom1",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Card",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "category_page.departmentBeauty_card_bottom2",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Card",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "email_page.rr1",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "category_page.departmentBeauty_card_bottom3",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Card",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "category_page.discover",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "category_page.departmentBeauty_bannerWide_bottom1",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens Mobile",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "search_page.find",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "category_page.departmentBeauty_bannerWide_bottom2",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens Mobile",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "category_page.departmentBeauty_bannerWide_bottom3",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens Mobile",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "category_page.departmentBeauty_vitrineRecomendacao_bottom1",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "category_page.departmentBeauty_vitrineRecomendacao_bottom2",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "search_page.suggestions",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "item_page.app_vitrineRecomendacao_bottom1",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        },
+        {
+          "name": "JSON - Recomendacao de Produtos com Produto Seed",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "item_page.app_vitrineRecomendacao_bottom2",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        },
+        {
+          "name": "JSON - Recomendacao de Produtos com Produto Seed",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "item_page.app_vitrineComplementar_middle",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        },
+        {
+          "name": "JSON - Recomendacao de Produtos com Produto Seed",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "cart_page.app_vitrineRecomendacao_bottom",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "cart_page.app_bannerStrip_bottom",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Strip",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.app_bannerCarousel1",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carrousel",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "cart_page.vitrineRecomendacao_bottom_embalagem",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.app_bannerCarousel2",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carrousel",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.app_bannerCarousel3",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carrousel",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.app_bannerCarousel4",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carrousel",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "cart_page.vitrineRecomendacao_bottom_caixa",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "email_page.similar_bests",
+      "layouts": [
+        {
+          "name": "Recs_Email",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.app_bannerCarousel5",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carrousel",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.app_card1",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Card",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "category_page.vitrineRecomendacao_top",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "cart_page.promoDDN",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.app_card2",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Card",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.app_card3",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Card",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.app_card4",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Card",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.app_card5",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Card",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.app_card6",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Card",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.app_bannerWide_middle1",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens Mobile",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.vitrineRecomendacao_cont1",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.app_bannerWide_middle2",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens Mobile",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.app_bannerWide_middle3",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens Mobile",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.app_vitrineRecomendacao_bottom1",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "cart_page.BRINDENATAL",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.app_vitrineRecomendacao_bottom2",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.app_vitrineRecomendacao_bottom3",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.app_vitrineRecomendacao_bottom4",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.app_bannerStrip_bottom",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Strip",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "search_page.app_bannerStrip_top",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Strip",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "search_page.app_vitrineRecomendacao_middle",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.tabproducts_1",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "search_page.app_vitrineRecomendacao_bottom",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "search_page.app_bannerWide_middle",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens Mobile",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.tabproducts_3",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "category_page.app_vitrineRecomendacao_top",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.tabproducts_2",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "error_page.app_vitrineRecomendacao_bottom",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.tabproducts_5",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "error_page.app_bannerWide_middle",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Three Itens",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "home_page.tabproducts_4",
+      "layouts": [
+        {
+          "name": "JSON - Recomendacao de Produtos",
+          "forRecs": true,
+          "forPromo": false,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "search_page.bannerCarousel1",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel Mobile",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        },
+        {
+          "name": "JSON - Banner - Carrousel",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "search_page.bannerCarousel2",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Carousel Mobile",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        },
+        {
+          "name": "JSON - Banner - Carrousel",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    },
+    {
+      "name": "search_page.bannerStrip_middle",
+      "layouts": [
+        {
+          "name": "JSON - Banner - Strip",
+          "forRecs": false,
+          "forPromo": true,
+          "forDynamic": false
+        }
+      ]
+    }
+  ],
+  "regions": [],
+  "languages": [
+    "es-UY"
+  ]
+}
