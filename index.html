@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>Observability Viewer</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
-
+<script src="./common.js"></script>
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
 
@@ -44,7 +44,7 @@ header img, header h1 {
 /* Input de arquivo */
 #fileInput {
   padding: 8px 12px; border-radius: 6px; border: 1px solid #ccc;
-  background: #fff; margin-bottom: 20px; display: inline-block;
+  background: #fff;  display: inline-block;
 }
 #fileInput:hover { border-color: #065182; }
 
@@ -137,22 +137,33 @@ button:hover { background: #065182; }
 </header>
 
 <div class="container">
-  <input type="file" id="fileInput" accept=".csv,.txt,.log">
-  <button id="exportBtn"  onclick="exportTableToExcel('tabela-clientes', 'obs-viewer.xlsx')">Export CSV</button>
+    <div style="display: flex; gap: 10px; align-items: center; margin-bottom: 20px;">
 
-  <div class="legend">
+        <button id="addClientBtn" style="padding:8px 12px; border-radius:6px; border:none; background:#0a3d62; color:#fff; cursor:pointer;">ADD CLIENT</button>
+
+        <select id="clientSelect" style="padding:8px 12px; border-radius:6px; border:1px solid #ccc; background:#fff;">
+            <option value="">Select a Client...</option>
+        </select>
+
+
+        <input type="file" id="fileInput" accept=".csv,.txt,.log" style="padding:8px 12px; border-radius:6px; border:1px solid #ccc; background:#fff;">
+    </div>
+
+    <button id="exportBtn" onclick="exportTableToExcel('tabela-clientes', 'obs-viewer.xlsx')">Export CSV</button>
+
+    <div class="legend">
     <div class="legend-item"><div class="legend-color engage"></div> Engage/DXP</div>
     <div class="legend-item"><div class="legend-color personalize"></div> Engage/Personalize</div>
     <div class="legend-item"><div class="legend-color personalizeClicks"></div> Engage/Personalize Clicks</div>
     <div class="legend-item"><div class="legend-color recs"></div> RecsForPlacements</div>
     <div class="legend-item"><div class="legend-color recsClicks"></div> RecsForPlacements Clicks</div>
-        <div class="legend-item"><div class="legend-color find-id"></div> Find</div>
+    <div class="legend-item"><div class="legend-color find-id"></div> Find</div>
     <div class="legend-item"><div class="legend-color find-click"></div> Find Click</div>
     <div class="legend-item"><div class="legend-color autocomplete"></div> Autocomplete</div>
     <div class="legend-item"><div class="legend-color default-api"></div> Fallback</div>
-  </div>
+    </div>
 
-  <div id="tableContainer" class="table-wrapper"></div>
+    <div id="tableContainer" class="table-wrapper"></div>
 </div>
 
 <!-- Modal -->
@@ -279,11 +290,48 @@ window.addEventListener("scroll", function() {
   }
 });
 </script>
+<script>
+// Função para ler todos os clientes do localStorage
+function getClients() {
+  return JSON.parse(localStorage.getItem('clients') || '[]');
+}
 
+const footer = document.querySelector('footer');
+if (footer) {
+  const pre = document.createElement('pre');
+  pre.style.background = '#f4f4f4';
+  pre.style.padding = '10px';
+  pre.style.borderRadius = '6px';
+  pre.style.marginTop = '10px';
+  pre.textContent = JSON.stringify(getClients(), null, 2);
+  footer.appendChild(pre);
+}
+
+console.log("Clients from localStorage:", getClients());
+// Atualiza dropdown com clientes do localStorage
+function updateClientDropdown() {
+  const select = document.getElementById('clientSelect');
+  select.innerHTML = '<option value="">Select a Client...</option>';
+  const clients = JSON.parse(localStorage.getItem('clients') || '[]');
+  clients.forEach(client => {
+    const option = document.createElement('option');
+    option.value = client.siteName;
+    option.textContent = client.siteName;
+    select.appendChild(option);
+  });
+}
+
+// Botão ADD CLIENT
+document.getElementById('addClientBtn').addEventListener('click', () => {
+  window.location.href = 'addClient.html';
+});
+
+// Inicializa dropdown ao carregar a página
+updateClientDropdown();
+</script>
 
 <footer style="text-align: center; padding: 10px; font-size: 12px; color: #666;">
-  &copy; <span id="currentYear"></span> Observability Viewer. All rights reserved.
-  Developed by <a href="https://www.linkedin.com/in/paulohenriquediaspereira/" style="color:#234376;" target="_blank">Paulo Henrique Dias Pereira</a>.
+  <span id="credits"></span>
 </footer>
 </body>
 </html>

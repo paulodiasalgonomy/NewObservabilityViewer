@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<script src="./common.js"></script>
+<title>Observability Viewer - Add Client</title>
+<style>
+  body { font-family: Arial, sans-serif; background: #f7f9fc; padding: 20px; }
+  #container { max-width: 600px; margin: auto; background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+  h1 { text-align: center; color: #234376; margin-bottom: 20px; }
+  label { display: block; margin-top: 12px; font-weight: bold; }
+  textarea { width: 100%; padding: 8px; margin-top: 4px; border-radius: 6px; border: 1px solid #ccc; resize: vertical; }
+  button { margin-top: 15px; padding: 10px 15px; width: 100%; border: none; border-radius: 6px; background: #0a3d62; color: #fff; font-weight: bold; cursor: pointer; transition: background 0.2s; }
+  button:hover { background: #065182; }
+  h2 { margin-top: 25px; font-size: 18px; color: #234376; }
+  ul { list-style: none; padding-left: 0; }
+  li { background: #f4f4f4; margin-bottom: 8px; padding: 8px 12px; border-radius: 4px; display: flex; justify-content: space-between; align-items: center; }
+  li button { width: auto; padding: 5px 10px; font-size: 12px; background: #234376; }
+  li button:hover { background: #065182; }
+</style>
+</head>
+<body>
+
+<div id="container">
+  <h1>Fill with JSON Config Script</h1>
+
+  <label for="configJSON">Paste here the JSON Config:</label>
+  <textarea id="configJSON" rows="8" placeholder='Example: {"siteName":"Algonomy US","siteId":1234,"siteAPIkey":"a85c12f892c73e30","clientAPIkeys":[{"name":"app","clientKey":"d87d7a0758a78f10"},{"name":"website","clientKey":"4ea346232d1c199"},...'></textarea>
+  <button id="saveBtn">Save</button>
+
+  <h2>Saved Clients:</h2>
+  <ul id="clientList"></ul>
+
+  <button id="goValidateBtn">Go to Validate</button>
+</div>
+
+<script>
+// Função para salvar cliente no localStorage
+function saveClient(client) {
+  if (!client.siteName) return alert("O JSON precisa ter um campo 'siteName'!");
+  
+  // Recupera array atual ou cria novo
+  let clients = JSON.parse(localStorage.getItem('clients') || '[]');
+  
+  // Substitui se já existir siteName igual
+  const index = clients.findIndex(c => c.siteName === client.siteName);
+  if (index >= 0) clients[index] = client;
+  else clients.push(client);
+
+  localStorage.setItem('clients', JSON.stringify(clients));
+}
+
+// Atualiza lista de clientes
+function updateClientList() {
+  const list = document.getElementById('clientList');
+  list.innerHTML = '';
+  const clients = JSON.parse(localStorage.getItem('clients') || '[]');
+  clients.forEach(client => {
+ const li = document.createElement('li');
+    li.textContent = client.siteName;
+    const delBtn = document.createElement('button');
+    delBtn.textContent = 'Delete';
+    delBtn.addEventListener('click', () => {
+      const filtered = clients.filter(c => c.siteName !== client.siteName);
+      localStorage.setItem('clients', JSON.stringify(filtered));
+      updateClientList();
+    });
+    li.appendChild(delBtn);
+    list.appendChild(li);
+  });
+}
+
+// Botão salvar
+document.getElementById('saveBtn').addEventListener('click', () => {
+  const text = document.getElementById('configJSON').value.trim();
+  if (!text) return alert("Insira um JSON válido!");
+  let config;
+  try { config = JSON.parse(text); } 
+  catch { return alert("JSON inválido!"); }
+
+  saveClient(config);
+  document.getElementById('configJSON').value = '';
+  updateClientList();
+});
+
+// Botão ir para validate.html
+document.getElementById('goValidateBtn').addEventListener('click', () => {
+  window.location.href = 'index.html';
+});
+
+// Inicializa lista ao carregar
+updateClientList();
+</script>
+<footer style="text-align: center; padding: 10px; font-size: 12px; color: #666;">
+  <span id="credits"></span>
+</footer>
+</body>
+</html>
