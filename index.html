@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>Observability Viewer</title>
+<title>Request Inspector</title>
 <link rel="icon" href="https://algonomy.com/wp-content/uploads/2020/11/favicon-75x75.png" sizes="32x32">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <script src="./common.js"></script>
@@ -12,7 +12,7 @@
 
 <header>
   <img src="https://algonomy.com/wp-content/uploads/2020/11/Algonomy-Logo-high-resolution.png" alt="Algonomy Logo">
-  <h1>Observability Viewer</h1>
+  <h1>Request Inspector</h1>
 </header>
 
 <div class="container">
@@ -65,62 +65,210 @@ const apiClasses = {
   "/rrserver/api/personalize": "personalize"
 };
 const apiPatterns = Object.keys(apiClasses).sort((a,b) => b.length - a.length);
-const placementParamRules = {
-  "item_page": ["productId"],
-  "add_to_cart_page": ["atcid"],
-  "cart_page": ["productId", "cv"],
-  "search_page": ["searchTerm"],
-  "category_page": ["categoryId"],
-  "purchase_complete_page": ["o", "productId", "pp", "q"]
-};
+
+/* placement APIs (onde aplicam as regras acima) */
 const placementApis = [
   "/rrserver/api/rrPlatform/recsForPlacements",
   "/rrserver/api/personalize"
 ];
 
-/* ====== Função de validação centralizada ====== */
-function validateParam(key, value, baseUrl = '', selectedClient = null) {
-  let status = 'OK';
-  let icon = '✔️';
+/* ====== Base / globais ====== */
+const baseRequiredParams = ["apiKey", "apiClientKey", "sessionId", "placements", "rcs", "userId", "channelId"];
+const baseRecommendedParams = ["ipor", "pref"];
+const optionalParams = ["dev", "aari", "attributeList", "bi", "categoryData", "chi", "count", "ctp",
+        "cts", "excludeAncestor", "excludeHtml", "excludeItemAttributes",
+        "excludeRecItems", "fdm", "filbr", "filcat", "filcatinc", "filterAtr",
+        "flv", "includeBrandFilteredProducts", "includeMVTData",
+        "includeMVTDetailedData", "includeSkuData", "includeStrategyData", "jsonp",
+        "lang", "maxPriceFilter", "minPriceFilter", "pp", "ppc", "priceRanges",
+        "privm", "q", "returnMinimalRecItemData", "rg", "rgt", "rid", "sgs", "st",
+        "strategySet", "ts", "udd", "userAttribute", "userAttributeReplace", "rfm",
+        "rfm_cond", "rfb", "mvt_ftr", "wlName", "wlAction", "cvAction"];
+
+/* ====== Específicos por página ====== */
+const pageSpecificRequired = {
+  item_page: ["productId"],
+  category_page: ["categoryId"],
+  search_page: ["searchTerm"],
+  brand_page: ["fpb"],
+  cart_page: ["productId","cv"],
+  add_to_cart_page: ["atcid"],
+  purchase_complete_page: ["o","productId","pp","q"]
+};
+
+const pageSpecificRecommended = {
+  item_page: ["fpb"],
+  cart_page: ["cv"]
+};
+
+/* ====== Monta rules dinâmicas ====== */
+const placementTypes = [
+  "home_page","item_page","category_page","search_page",
+  "brand_page","cart_page","add_to_cart_page","purchase_complete_page"
+];
+
+const placementParamRules = {};
+placementTypes.forEach(page => {
+  placementParamRules[page] = {
+    required: [...baseRequiredParams, ...(pageSpecificRequired[page] || [])],
+    recommended: [...baseRecommendedParams, ...(pageSpecificRecommended[page] || [])],
+    optional: [...optionalParams]
+  };
+});
+
+
+const validationRulesByApi = {};
+placementApis.forEach(api => {
+  validationRulesByApi[api] = { placements: {} };
+  placementTypes.forEach(page => {
+    validationRulesByApi[api].placements[page] = { 
+      required: placementParamRules[page].required,
+      recommended: placementParamRules[page].recommended,
+      optional: placementParamRules[page].optional
+    };
+  });
+});
+
+
+/* ====== Helpers / Stores (reinicializados a cada upload) ====== */
+let expectedSessionByPlacement = {};   // { placementType: expectedSessionId }
+let rcsValuesByPlacement = {};         // { placementType: Set(rcsValues) }
+let rowsCountByPlacement = {};         // { placementType: count }
+let rcsAllSameByPlacement = {};        // { placementType: boolean }
+let purchaseMismatchByRow = new WeakMap(); // rowObject -> boolean (purchase pp/q/productId mismatch)
+
+/* ====== Detect placement type from placements param ====== */
+function detectPlacementType(placementsStr) {
+  if (!placementsStr) return '';
+  const first = (placementsStr || '').split('|')[0].toLowerCase();
+  if (first.includes("home_page")) return "home_page";
+  if (first.includes("item_page")) return "item_page";
+  if (first.includes("category_page")) return "category_page";
+  if (first.includes("search_page")) return "search_page";
+  if (first.includes("brand_page")) return "brand_page";
+  if (first.includes("cart_page")) return "cart_page";
+  if (first.includes("add_to_cart_page")) return "add_to_cart_page";
+  if (first.includes("purchase_complete_page")) return "purchase_complete_page";
+  return '';
+}
+
+/* ====== Utilidades simples ====== */
+function isPlacementApiBase(baseUrl) {
+  if (!baseUrl) return false;
+  return placementApis.some(api => baseUrl.startsWith(api));
+}
+function isIPv4(v) {
+  const ipv4Pattern = /^(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)){3}$/;
+  return ipv4Pattern.test(v);
+}
+function isNumeric(v) {
+  if (v === '' || v === null || v === undefined) return false;
+  return !Number.isNaN(Number(v));
+}
+function isIntegerValue(v) {
+  if (!isNumeric(v)) return false;
+  return Number(v) === Math.floor(Number(v));
+}
+
+/* ====== Função central de validação ======
+   key, value, baseUrl (matchedApi), placementType, selectedClient
+   Retorna { status, icon, message, bgColor } */
+function validateParam(key, value, baseUrl = '', placementType = '', selectedClient = null) {
+  let status = 'Unknown';
+  let icon = '';
   let message = '';
+  let bgColor = 'gray';
 
-  // Validações gerais
-  if (value === '' && key === 'userId') { status = 'Invalid'; icon = '❌'; message = 'UserID not Defined'; }
-  else if (value === 'anonymous' || value === 'undefined') { status = 'Invalid'; icon = '❌'; message = 'Invalid Value'; }
+  // ===== Regras específicas primeiro =====
+  if (key === 'ipor') {
+    if (!value || value.toLowerCase() === 'undefined') {
+      return { status: 'Invalid', icon: '❌', message: 'ipor is missing', bgColor: '' };
+    }
+    if (!isIPv4(value)) {
+      return { status: 'Invalid', icon: '❌', message: 'Invalid IP', bgColor: '' };
+    }
+    return { status: 'OK', icon: '✔️', message: 'Valid IPv4', bgColor: '' };
+  }
 
-  // Valida cliente
+  if (key === 'pref') {
+    if (value && !/^https?:\/\//.test(value)) {
+      return { status: 'Invalid', icon: '❌', message: 'Invalid URL', bgColor: '' };
+    }
+    if (value) return { status: 'OK', icon: '✔️', message: 'Valid URL', bgColor: '' };
+  }
+
   if (selectedClient) {
     if (key === 'apiKey') {
-      if (value === selectedClient.siteAPIkey) { status='OK'; icon='✔️'; }
-      else { status='Invalid'; icon='❌'; message='Invalid apiKey'; }
+      if (!value) return { status: 'Invalid', icon: '❌', message: 'apiKey missing', bgColor: '' };
+      if (value === selectedClient.siteAPIkey) {
+        return { status: 'OK', icon: '✔️', message: 'Matches selected client', bgColor: '' };
+      } else {
+        return { status: 'Invalid', icon: '❌', message: 'Invalid apiKey', bgColor: '' };
+      }
     }
     if (key === 'apiClientKey') {
+      if (!value) return { status: 'Invalid', icon: '❌', message: 'apiClientKey missing', bgColor: '' };
       const match = selectedClient.clientAPIkeys.find(k => k.clientKey === value);
-      if (match) { status='OK'; icon='✔️'; message=`ClientKey: ${match.name}`; }
-      else { status='Invalid'; icon='❌'; message='Invalid apiClientKey'; }
+      if (match) {
+        return { status: 'OK', icon: '✔️', message: `ClientKey: ${match.name}`, bgColor: '' };
+      } else {
+        return { status: 'Invalid', icon: '❌', message: 'Invalid apiClientKey', bgColor: '' };
+      }
     }
   }
 
-  // Valida IP
-  if (key === 'ipor') {
-    const ipv4Pattern = /^(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)){3}$/;
-    if (!ipv4Pattern.test(value)) { status='Invalid'; icon='❌'; message='Invalid IP'; }
+  // ===== Regras genéricas por API =====
+  const apiRules = validationRulesByApi[baseUrl];
+  if (!apiRules) return { status, icon, message, bgColor };
+
+  const placementRules = apiRules.placements ? apiRules.placements[placementType] : null;
+  if (!placementRules) return { status, icon, message, bgColor };
+
+  const isRequired = placementRules.required?.includes(key);
+  const isRecommended = placementRules.recommended?.includes(key);
+  const isOptional = placementRules.optional?.includes(key);
+
+  // Required → precisa sempre estar presente
+  if (isRequired) {
+    if (!value) {
+      return { status: 'Invalid', icon: '❌', message: 'Required parameter missing', bgColor: '' };
+    }
+    return { status: 'OK', icon: '✔️', message: 'Required param OK', bgColor: '' };
   }
 
-  // Valida placements
-  if (placementApis.some(api => baseUrl.startsWith(api)) && key === 'placements') {
-    const placementTypes = Object.keys(placementParamRules);
-    const hasValid = placementTypes.some(pt => value.includes(pt));
-    if (!hasValid) { status='Invalid'; icon='❌'; message='Invalid placement'; }
+  // Recommended → alerta se faltar
+  if (isRecommended) {
+    if (!value) {
+      return { status: 'Warning', icon: '⚠️', message: 'Recommended parameter missing', bgColor: '' };
+    }
+    return { status: 'OK', icon: '✔️', message: 'Recommended param OK', bgColor: '' };
   }
 
-  return { status, icon, message };
+  // Optional → não mostra ícone se faltar, mas mantém cor da API
+  if (isOptional) {
+    if (!value) {
+      return { status: 'OK', icon: '', message: 'Optional parameter missing', bgColor: '' };
+    }
+    return { status: 'OK', icon: '✔️', message: 'Optional param OK', bgColor: '' };
+  }
+
+  return { status, icon, message, bgColor };
 }
+
+
 
 /* ====== Processa CSV ====== */
 document.getElementById("fileInput").addEventListener("change", function(e) {
   const file = e.target.files[0]; 
   if (!file) return;
+
+  // reset stores per upload
+  expectedSessionByPlacement = {};
+  rcsValuesByPlacement = {};
+  rowsCountByPlacement = {};
+  rcsAllSameByPlacement = {};
+  purchaseMismatchByRow = new WeakMap();
+
   const reader = new FileReader();
   reader.onload = function(event) {
     document.getElementById("exportBtn").style.display = "inline-block";
@@ -128,8 +276,7 @@ document.getElementById("fileInput").addEventListener("change", function(e) {
     const lines = event.target.result.split(/\r?\n/); 
     const rows = [];
 
-    const apiCounts = Object.fromEntries(Object.values(apiClasses).concat(['recsClicks', 'personalizeClicks','default-api']).map(k=>[k,0]));
-
+    // primeiro parse simples do arquivo em linhas/params
     lines.forEach(rawLine => {
       const line = rawLine.trim();
       const pageMatch = line.match(/^\*(.+?)\*$/);
@@ -161,6 +308,71 @@ document.getElementById("fileInput").addEventListener("change", function(e) {
       return; 
     }
 
+    // prepass: detect matchedApi, rowClass, placementType, collect sessionId/rcs stats
+    rows.forEach(r => {
+      if (r.page) return;
+      const normalizedBase = (r.base || "").trim();
+      const normalizedUrl = (r.url || "").trim();
+
+      // detect matchedApi
+      let matchedApi = "";
+      let rowClass = "default-api";
+      for (const api in apiClasses) {
+        if (normalizedBase.startsWith(api)) { rowClass = apiClasses[api]; matchedApi = api; break; }
+      }
+      if (!matchedApi) {
+        for (const api of apiPatterns) {
+          if (normalizedBase.includes(api) || normalizedUrl.includes(api)) { rowClass = apiClasses[api]; matchedApi = api; break; }
+        }
+      }
+      r.matchedApi = matchedApi || "";
+      r.rowClass = rowClass;
+
+      // placements detection if this is a placement API
+      const isPlacement = isPlacementApiBase(r.matchedApi);
+      r.isPlacementApi = isPlacement;
+      r.placementType = '';
+      if (isPlacement) {
+        const placementsRaw = (r.params && r.params.placements) ? r.params.placements : '';
+        r.placementType = detectPlacementType(placementsRaw);
+
+        // sessionId tracking
+        const sess = r.params && r.params.sessionId ? r.params.sessionId : '';
+        if (!rowsCountByPlacement[r.placementType]) rowsCountByPlacement[r.placementType] = 0;
+        rowsCountByPlacement[r.placementType]++;
+
+        if (!rcsValuesByPlacement[r.placementType]) rcsValuesByPlacement[r.placementType] = new Set();
+        if (r.params && r.params.rcs) rcsValuesByPlacement[r.placementType].add(r.params.rcs);
+
+        // session candidates
+        if (!expectedSessionByPlacement[r.placementType]) {
+          if (sess) expectedSessionByPlacement[r.placementType] = sess;
+        } else {
+          // keep first seen as expected (do nothing)
+        }
+
+        // purchase page special: check counts for productId / pp / q
+        if (r.placementType === 'purchase_complete_page') {
+          const productIds = (r.params.productId || '').split('|').filter(Boolean);
+          const pps = (r.params.pp || '').split('|').filter(Boolean);
+          const qs = (r.params.q || '').split('|').filter(Boolean);
+          let mismatch = false;
+          // ensure pp numeric and q integers
+          if (pps.length > 0 && !pps.every(x => !Number.isNaN(Number(x)))) mismatch = true;
+          if (qs.length > 0 && !qs.every(x => isIntegerValue(x))) mismatch = true;
+          if ((productIds.length && pps.length && qs.length) && !(productIds.length === pps.length && pps.length === qs.length)) mismatch = true;
+          if (mismatch) purchaseMismatchByRow.set(r, true);
+        }
+      }
+    });
+
+    // after prepass: compute rcsAllSameByPlacement
+    for (const pt in rcsValuesByPlacement) {
+      const set = rcsValuesByPlacement[pt] || new Set();
+      rcsAllSameByPlacement[pt] = (set.size <= 1 && (rowsCountByPlacement[pt] || 0) > 1);
+    }
+
+    // agora monte a tabela (segunda passada), aplicando validateParam
     const allParams = [...new Set(rows.flatMap(r => r.params ? Object.keys(r.params) : []))];
     let html = "<table id='logs-table'>";
     html += "<tbody>";
@@ -168,6 +380,9 @@ document.getElementById("fileInput").addEventListener("change", function(e) {
     const selectedClientName = document.getElementById('clientSelect').value;
     const clients = JSON.parse(localStorage.getItem('clients') || '[]');
     const selectedClient = clients.find(c => c.siteName === selectedClientName);
+
+    // contadores por classe
+    const apiCounts = Object.fromEntries(Object.values(apiClasses).concat(['recsClicks','personalizeClicks','default-api']).map(k=>[k,0]));
 
     rows.forEach(r => {
       if (r.page) { 
@@ -178,32 +393,24 @@ document.getElementById("fileInput").addEventListener("change", function(e) {
         return; 
       }
 
-      let rowClass = "default-api"; 
-      let matchedApi = "";
-      const normalizedBase = (r.base || "").trim();
-      const normalizedUrl = (r.url || "").trim();
+      apiCounts[r.rowClass] = (apiCounts[r.rowClass] || 0) + 1;
 
-      for (const api in apiClasses) { 
-        if (normalizedBase.startsWith(api)) { rowClass = apiClasses[api]; matchedApi = api; break; } 
-      }
-      if (rowClass === "default-api") { 
-        for (const api of apiPatterns) { 
-          if (normalizedBase.includes(api) || normalizedUrl.includes(api)) { 
-            rowClass = apiClasses[api]; matchedApi = api; break; 
-          } 
-        } 
-      }
-
-      apiCounts[rowClass]++;
-
-      html += `<tr class="${rowClass}" data-api="${matchedApi}">`;
+      html += `<tr class="${r.rowClass}" data-api="${r.matchedApi}">`;
       html += `<td>${r.timestamp}</td>`;
       html += `<td><button class="getRequest" data-url="${r.url}">GET REQUEST</button></td>`;
 
       allParams.forEach(p => {
         const val = r.params[p] || '';
-        const result = validateParam(p, val, matchedApi, selectedClient);
-        html += `<td><div title="${result.message || val}">${val} ${result.icon}</div></td>`; 
+        const result = validateParam(p, val, r.matchedApi, r.placementType, selectedClient);
+
+        // special-case: if purchase mismatch precomputed, override q/pp display
+        if (purchaseMismatchByRow.get(r) && (p === 'q' || p === 'pp' || p === 'productId')) {
+          // show explicit mismatch error if applies
+          const msg = 'purchase items counts mismatch or invalid numbers';
+          html += `<td style="background:${result.bgColor || 'transparent'}"><div title="${msg}">${val} ❌</div></td>`;
+        } else {
+          html += `<td style="background:${result.bgColor || 'transparent'}"><div title="${result.message || val}">${val} ${result.icon}</div></td>`; 
+        }
       });
 
       html += "</tr>";
@@ -233,6 +440,18 @@ document.getElementById("fileInput").addEventListener("change", function(e) {
         const modalPre = document.getElementById("modalURL");
         const copyBtn = document.getElementById("copyBtn");
 
+        // compute placementType from query string (if any)
+        let placementType = '';
+        if (query) {
+          const params = {};
+          query.split("&").forEach(pair => {
+            if (!pair) return;
+            const [k, v] = pair.split("=");
+            params[k] = v === undefined ? "" : decodeURIComponent(v);
+          });
+          placementType = detectPlacementType(params.placements || '');
+        }
+
         let tableHtml = `<table class="modal-table" style="border-collapse: collapse; border: 1px solid #000; width: 100%;">
           <thead>
             <tr><th colspan="3" style="border:1px solid #000; padding:4px;">${base}</th></tr>
@@ -242,20 +461,24 @@ document.getElementById("fileInput").addEventListener("change", function(e) {
         let copyText = `${base}\nParâmetro | Valor | Status\n`;
 
         if (query) {
+          const params = {};
           query.split("&").forEach(pair => {
             if (!pair) return;
             const [k, vRaw] = pair.split("=");
-            const v = decodeURIComponent(vRaw || '');
-            const result = validateParam(k, v, base, selectedClient);
+            params[k] = vRaw === undefined ? "" : decodeURIComponent(vRaw);
+          });
 
-            const color = result.status === 'OK' ? 'green' : 'red';
+          for (const k in params) {
+            const v = params[k];
+            const result = validateParam(k, v, base, placementType, selectedClient);
+            const color = result.status === 'OK' ? 'green' : (result.status === 'Warning' ? 'orange' : 'red');
             tableHtml += `<tr>
               <td style="border:1px solid #000; padding:4px;">${k}</td>
-              <td style="border:1px solid #000; padding:4px;">${v}</td>
+              <td style="border:1px solid #000; padding:4px; background:${result.bgColor || 'transparent'}">${v}</td>
               <td style="border:1px solid #000; padding:4px; color:${color}; font-weight:bold">${result.status}</td>
             </tr>`;
             copyText += `${k} | ${v} | ${result.status}\n`;
-          });
+          }
         }
 
         tableHtml += `<tr><td>Request</td><td colspan="2">${fullUrl}</td></tr></tbody></table>`;
@@ -288,28 +511,30 @@ document.getElementById("fileInput").addEventListener("change", function(e) {
   };
   reader.readAsText(file);
 });
-  function exportTableToExcel(tableID, filename = 'tabela.xlsx') {
+
+/* ====== Export / other UI helpers (mantive sua implementação) ====== */
+function exportTableToExcel(tableID, filename = 'tabela.xlsx') {
   const table = document.getElementById(tableID);
   if (!table) {
     console.error("Tabela não encontrada:", tableID);
     return;
   }
-
   let wb = XLSX.utils.table_to_book(table, { sheet: "Sheet1" });
   XLSX.writeFile(wb, filename);
 }
-
 
 window.addEventListener("scroll", function() {
   const header = document.querySelector("header");
   if (window.scrollY > 50) {
     header.classList.add("shrink");
     const legend = document.querySelector('.legend');
-    legend.style.top = "31px";
+    if (legend) legend.style.top = "31px";
   } else {
     header.classList.remove("shrink");
   }
-});// Função para ler todos os clientes do localStorage
+});
+
+// Função para ler todos os clientes do localStorage
 function getClients() {
   return JSON.parse(localStorage.getItem('clients') || '[]');
 }
@@ -335,6 +560,7 @@ document.getElementById('addClientBtn').addEventListener('click', () => {
 // Inicializa dropdown ao carregar a página
 updateClientDropdown();
 </script>
+
 
 <footer>
   <span id="credits"></span>
