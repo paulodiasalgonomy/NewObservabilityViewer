@@ -23,16 +23,21 @@
 <body>
 
 <div id="container">
-  <h1>Fill with JSON Config Script</h1>
+  <h1>ADD Clients with JSON Config Script</h1>
+  <button id="importBtn">Import Clients</button>
+  <input type="file" id="importFile" accept="application/json" style="display:none;">
+  <button id="exportBtn">Export Clients</button>
 
-  <label for="configJSON">Paste here the JSON Config:</label>
-  <textarea id="configJSON" rows="8" placeholder='Example: {"siteName":"Algonomy US","siteId":1234,"siteAPIkey":"a85c12f892c73e30","clientAPIkeys":[{"name":"app","clientKey":"d87d7a0758a78f10"},{"name":"website","clientKey":"4ea346232d1c199"},...'></textarea>
+  <label for="configJSON">Or paste here the JSON Config:</label>
+  <textarea id="configJSON" rows="8" placeholder='Example: {"siteName":"Algonomy US","siteId":1234,"siteAPIkey":"a85c12f892c73e30","clientAPIkeys":[{"name":"app","clientKey":"d87d7a0758a78f10"},{"name":"website","clientKey":"4ea346232d1c199"}]}'></textarea>
   <button id="saveBtn">Save</button>
 
   <h2>Saved Clients:</h2>
   <ul id="clientList"></ul>
 
-  <button id="goValidateBtn">Go to Validate</button>
+
+
+  <button id="goValidateBtn">Return to the main page</button>
 </div>
 
 <script>
@@ -40,10 +45,7 @@
 function saveClient(client) {
   if (!client.siteName) return alert("O JSON precisa ter um campo 'siteName'!");
   
-  // Recupera array atual ou cria novo
   let clients = JSON.parse(localStorage.getItem('clients') || '[]');
-  
-  // Substitui se já existir siteName igual
   const index = clients.findIndex(c => c.siteName === client.siteName);
   if (index >= 0) clients[index] = client;
   else clients.push(client);
@@ -57,7 +59,7 @@ function updateClientList() {
   list.innerHTML = '';
   const clients = JSON.parse(localStorage.getItem('clients') || '[]');
   clients.forEach(client => {
- const li = document.createElement('li');
+    const li = document.createElement('li');
     li.textContent = client.siteName;
     const delBtn = document.createElement('button');
     delBtn.textContent = 'Delete';
@@ -71,7 +73,7 @@ function updateClientList() {
   });
 }
 
-// Botão salvar
+// Botão salvar manual
 document.getElementById('saveBtn').addEventListener('click', () => {
   const text = document.getElementById('configJSON').value.trim();
   if (!text) return alert("Insira um JSON válido!");
@@ -84,6 +86,50 @@ document.getElementById('saveBtn').addEventListener('click', () => {
   updateClientList();
 });
 
+// Importar arquivo
+document.getElementById('importBtn').addEventListener('click', () => {
+  document.getElementById('importFile').click();
+});
+
+document.getElementById('importFile').addEventListener('change', (event) => {
+  const file = event.target.files[0];
+  if (!file) return;
+  
+  const reader = new FileReader();
+  reader.onload = e => {
+    try {
+      const data = JSON.parse(e.target.result);
+      if (!Array.isArray(data.sites)) return alert("Arquivo inválido: não contém 'sites'!");
+      
+      let clients = JSON.parse(localStorage.getItem('clients') || '[]');
+      data.sites.forEach(site => {
+        const index = clients.findIndex(c => c.siteName === site.siteName);
+        if (index >= 0) clients[index] = site;
+        else clients.push(site);
+      });
+      localStorage.setItem('clients', JSON.stringify(clients));
+      updateClientList();
+      alert("Clientes importados com sucesso!");
+    } catch (err) {
+      alert("Erro ao importar JSON: " + err.message);
+    }
+  };
+  reader.readAsText(file);
+});
+
+// Exportar arquivo
+document.getElementById('exportBtn').addEventListener('click', () => {
+  const clients = JSON.parse(localStorage.getItem('clients') || '[]');
+  const exportData = { sites: clients };
+  const blob = new Blob([JSON.stringify(exportData, null, 2)], {type: "application/json"});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `clients_backup_${new Date().toISOString().slice(0,10)}.json`;
+  a.click();
+  URL.revokeObjectURL(url);
+});
+
 // Botão ir para validate.html
 document.getElementById('goValidateBtn').addEventListener('click', () => {
   window.location.href = 'index.html';
@@ -92,6 +138,7 @@ document.getElementById('goValidateBtn').addEventListener('click', () => {
 // Inicializa lista ao carregar
 updateClientList();
 </script>
+
 <footer style="text-align: center; padding: 10px; font-size: 12px; color: #666;">
   <span id="credits"></span>
 </footer>
