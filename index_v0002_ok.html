@@ -64,19 +64,7 @@ const apiClasses = {
   "/rrserver/api/personalize": "personalize"
 };
 const apiPatterns = Object.keys(apiClasses).sort((a,b) => b.length - a.length);
-const placementParamRules = {
-  "item_page": ["productId"],
-  "add_to_cart_page": ["atcid"],
-  "cart_page": ["productId", "cv"],
-  "search_page": ["searchTerm"],
-  "category_page": ["categoryId"],
-  "purchase_complete_page": ["o", "productId", "pp", "q"]
-};
 
-const placementApis = [
-  "/rrserver/api/rrPlatform/recsForPlacements",
-  "/rrserver/api/personalize"
-];
 document.getElementById("fileInput").addEventListener("change", function(e) {
   const file = e.target.files[0]; if (!file) return;
   const reader = new FileReader();
@@ -131,18 +119,13 @@ document.getElementById("fileInput").addEventListener("change", function(e) {
     }
 
     const allParams = [...new Set(rows.flatMap(r => r.params ? Object.keys(r.params) : []))];
-    let html = "<table id='logs-table'";
-    allParams.forEach(p => { html += ``; });
-    html += "<tbody>";
+    let html = "<table id='logs-table'><thead><tr><th><div>Time</div></th><th><div>URL</div></th>";
+    allParams.forEach(p => { html += `<th><div>${p}</div></th>`; });
+    html += "</tr></thead><tbody>";
 
     rows.forEach(r => {
       if (r.page) { 
-        html += `<tr class="page-row"><td colspan="${allParams.length + 2}">${r.page}</td></tr>`;
-        // insere cabeçalho logo depois
-        html += "<tr class='sub-header'>";
-        html += "<th><div>Time</div></th><th><div>URL</div></th>";
-        allParams.forEach(p => { html += `<th><div>${p}</div></th>`; });
-        html += "</tr>";
+        html += `<tr class="page-row"><td colspan="${allParams.length + 2}">${r.page}</td></tr>`; 
         return; 
       }
 
@@ -174,59 +157,13 @@ document.getElementById("fileInput").addEventListener("change", function(e) {
       html += `<tr class="${rowClass}" data-api="${matchedApi}">`;
       html += `<td><div title="${r.timestamp}">${r.timestamp}</div></td>`;
       html += `<td><button class="seeUrlBtn" data-url="${r.url}">SEE FULL URL</button></td>`;
-
-      // Pega cliente selecionado
-      const selectedClientName = document.getElementById('clientSelect').value;
-      const clients = JSON.parse(localStorage.getItem('clients') || '[]');
-      const selectedClient = clients.find(c => c.siteName === selectedClientName);
-
       allParams.forEach(p => { 
-        let val = r.params[p] || "";
-        let icon = "";
-
-        if (selectedClient) {
-          // valida apiKey
-          if (p === "apiKey" && val === selectedClient.siteAPIkey) {
-            icon = `<span class="ok-icon" title="apiKey OK">✔️</span>`;
-          }
-
-          // valida apiClientKey
-          if (p === "apiClientKey") {
-            const match = selectedClient.clientAPIkeys.find(k => k.clientKey === val);
-            if (match) {
-              icon = `<span class="ok-icon" title="apiClientKey: ${match.name}">✔️</span>`;
-            }
-          }
-        }
-        if (placementApis.includes(matchedApi)) {
-          const placement = r.params.placements || "";
-          const ruleKey = Object.keys(placementParamRules).find(type => placement.includes(type));
-
-          if (ruleKey) {
-            placementParamRules[ruleKey].forEach(requiredParam => {
-              if (!allParams.includes(requiredParam)) {
-                // garante que a coluna exista
-                allParams.push(requiredParam);
-              }
-              if (!r.params[requiredParam]) {
-                // insere ❌ na célula desse parâmetro
-                html = html.replace(
-                  `<td><div title=""></div></td>`,
-                  `<td><div title="">❌<span class="error-icon" title="Parâmetro '${requiredParam}' obrigatório não encontrado."></span></div></td>`
-                );
-              }
-            });
-          }
-        }
-        html += `<td><div title="${val}">${val} ${icon}</div></td>`; 
+        const val = r.params[p] || ""; 
+        html += `<td><div title="${val}">${val}</div></td>`; 
       });
-
-
       html += "</tr>";
     });
 
-
-      
     html += "</tbody></table>";
     document.getElementById("tableContainer").innerHTML = html;
 

@@ -254,3 +254,25 @@ footer {
   font-size: 12px;
   color: #666;
 }
+.ok-icon {
+  color: green;
+  font-weight: bold;
+  margin-left: 5px;
+  cursor: help;
+}
+.error-icon {
+  color: red;
+  font-weight: bold;
+  margin-left: 5px;
+  cursor: help;
+}
+#logs-table thead th {
+  position: sticky;
+  top: 0;
+  background: #f7f9fc; /* mesma cor do fundo */
+  z-index: 2;
+}
+.page-row {
+  background: #eaeaea;
+  font-weight: bold;
+}
