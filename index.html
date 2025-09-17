@@ -3,131 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <title>Observability Viewer</title>
+<link rel="icon" href="https://algonomy.com/wp-content/uploads/2020/11/favicon-75x75.png" sizes="32x32">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <script src="./common.js"></script>
-<style>
-* { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
-
-body { background: #f7f9fc; padding: 0; }
-
-/* Header */
-header {
-  display: flex; align-items: center;
-  background: #c6dcff; color: #234376;
-  padding: 10px 20px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  position: sticky; top: 0; z-index: 100;
-}
-header img { height: 50px; margin-right: 15px; }
-header h1 { font-size: 26px; font-weight: bold; }
-header.shrink{
-  padding: 5px 2px;
-  max-height: 30px;
-}
-header.shrink img {
-    transform: scale(0.5);
-    transform-origin: right center;
-    margin-right: 15px;
-}
-header.shrink h1 {
-  transform: scale(0.5);
-  transform-origin: left center;
-  margin: 0;
-}
-header img, header h1 {
-  transition: transform 0.3s ease;
-}
-
-/* Container */
-.container { padding: 20px; max-width: 100%; }
-
-/* Input de arquivo */
-#fileInput {
-  padding: 8px 12px; border-radius: 6px; border: 1px solid #ccc;
-  background: #fff;  display: inline-block;
-}
-#fileInput:hover { border-color: #065182; }
-
-/* Legenda */
-.legend {
-  margin-bottom: 20px; display: flex; flex-wrap: wrap; gap: 15px;
-  background: #fff; padding: 10px 15px; border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-  position: sticky; top: 72px; z-index: 1000;
-}
-.legend-item { display: flex; align-items: center; gap: 8px; font-size: 14px; }
-.legend-color { width: 18px; height: 18px; border-radius: 4px; border: 1px solid #666; }
-
-/* API Colors */
-.engage        { background: #efd0ff; }
-.recs          { background: #d3f9d8; }
-.recsClicks    { background: #5d8963; }
-.find-click    { background: #bbbc94; }
-.find-id       { background: #fff3bf; }
-.autocomplete  { background: #f6f79f; }
-.personalize   { background: #feb2ff; }
-.personalizeClicks   { background: #6e3e6f; }
-.default-api   { background: #07ebf3; }
-
-/* Table */
-.table-wrapper { overflow-x: auto; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
-table { border-collapse: collapse; width: 100%; background: #fff; }
-th, td {
-  border: 1px solid #e0e0e0;
-  padding: 8px;
-  font-size: 14px;
-  max-width: 300px;
-}
-th { 
-  background: #f0f2f5;
-  position: sticky; top: 40px; /* abaixo da legenda */
-  text-align: left;
-  z-index: 80;
-}
-td > div {
-  max-width: 280px;
-  overflow-x: auto;
-  white-space: nowrap;
-  padding: 2px 4px;
-  border-radius: 4px;
-}
-td > div::-webkit-scrollbar { height: 6px; }
-td > div::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.2); border-radius: 3px; }
-td > div::-webkit-scrollbar-track { background: rgba(0,0,0,0.05); }
-thead th {
-  top: -12px; /* ajusta conforme a altura real do header + legenda */
-  background: #f0f2f5;
-  z-index: 95;
-}
-/* Página row */
-.page-row td { background: #0a3d62; color: #fff; font-weight: bold; font-size: 16px; padding: 12px; }
-
-/* Buttons */
-button {
-  cursor: pointer; padding: 5px 10px; border-radius: 6px; border: none; background: #0a3d62; color: #fff; font-weight: bold;
-  transition: background 0.2s;
-}
-button:hover { background: #065182; }
-
-/* Modal */
-.modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.5); }
-.modal-content { background: #fff; margin: 10% auto; padding: 20px; border-radius: 8px; width: 90%; max-width: 90%; position: relative; }
-.modal-content pre { white-space: pre-wrap; word-break: break-word; background: #f4f4f4; padding: 12px; border-radius: 6px; max-height: 300px; overflow-y: auto; }
-.modal-close { position: absolute; top: 10px; right: 15px; cursor: pointer; font-size: 20px; font-weight: bold; color: #333; }
-.modal-close:hover { color: #0a3d62; }
-#exportBtn {
-  display: none;
-  margin-left: 10px;
-  padding: 8px 12px;
-  border-radius: 6px;
-  border: none;
-  background: #234376;
-  color: #fff;
-  font-weight: bold;
-  cursor: pointer;
-}
-#exportBtn:hover { background: #065182; }
-</style>
+<link rel="stylesheet" href="./style.css">
 </head>
 <body>
 
@@ -137,19 +16,18 @@ button:hover { background: #065182; }
 </header>
 
 <div class="container">
-    <div style="display: flex; gap: 10px; align-items: center; margin-bottom: 20px;">
+    <div id="btnsContainer">
 
-        <button id="addClientBtn" style="padding:8px 12px; border-radius:6px; border:none; background:#0a3d62; color:#fff; cursor:pointer;">ADD CLIENT</button>
-
-        <select id="clientSelect" style="padding:8px 12px; border-radius:6px; border:1px solid #ccc; background:#fff;">
+        <button id="addClientBtn">ADD CLIENT</button>
+        <select id="clientSelect">
             <option value="">Select a Client...</option>
         </select>
+        <input type="file" id="fileInput" accept=".csv,.txt,.log">
 
-
-        <input type="file" id="fileInput" accept=".csv,.txt,.log" style="padding:8px 12px; border-radius:6px; border:1px solid #ccc; background:#fff;">
+        <button id="exportBtn" onclick="exportTableToExcel('logs-table', 'obs-viewer.xlsx')">Export .XLSX</button>
     </div>
 
-    <button id="exportBtn" onclick="exportTableToExcel('tabela-clientes', 'obs-viewer.xlsx')">Export CSV</button>
+
 
     <div class="legend">
     <div class="legend-item"><div class="legend-color engage"></div> Engage/DXP</div>
@@ -193,7 +71,22 @@ document.getElementById("fileInput").addEventListener("change", function(e) {
   reader.onload = function(event) {
     document.getElementById("exportBtn").style.display = "inline-block";
 
-    const lines = event.target.result.split(/\r?\n/); const rows = [];
+    const lines = event.target.result.split(/\r?\n/); 
+    const rows = [];
+
+    // contador de requisições por classe
+    const apiCounts = {
+      engage: 0,
+      recs: 0,
+      recsClicks: 0,
+      "find-click": 0,
+      "find-id": 0,
+      autocomplete: 0,
+      personalize: 0,
+      personalizeClicks: 0,
+      "default-api": 0
+    };
+
     lines.forEach(rawLine => {
       const line = rawLine.trim();
       const pageMatch = line.match(/^\*(.+?)\*$/);
@@ -220,33 +113,72 @@ document.getElementById("fileInput").addEventListener("change", function(e) {
       rows.push({ timestamp, base, url, params });
     });
 
-    if (rows.length === 0) { document.getElementById("tableContainer").innerHTML = "<p>Nenhuma linha válida encontrada.</p>"; return; }
+    if (rows.length === 0) { 
+      document.getElementById("tableContainer").innerHTML = "<p>Nenhuma linha válida encontrada.</p>"; 
+      return; 
+    }
 
     const allParams = [...new Set(rows.flatMap(r => r.params ? Object.keys(r.params) : []))];
-    let html = "<table id='tabela-clientes'><thead><tr><th><div>Time</div></th><th><div>URL</div></th>";
+    let html = "<table id='logs-table'><thead><tr><th><div>Time</div></th><th><div>URL</div></th>";
     allParams.forEach(p => { html += `<th><div>${p}</div></th>`; });
     html += "</tr></thead><tbody>";
 
     rows.forEach(r => {
-      if (r.page) { html += `<tr class="page-row"><td colspan="${allParams.length + 2}">${r.page}</td></tr>`; return; }
+      if (r.page) { 
+        html += `<tr class="page-row"><td colspan="${allParams.length + 2}">${r.page}</td></tr>`; 
+        return; 
+      }
 
-      let rowClass = "default-api"; let matchedApi = "";
+      let rowClass = "default-api"; 
+      let matchedApi = "";
       const normalizedBase = (r.base || "").trim();
       const normalizedUrl = (r.url || "").trim();
 
-      for (const api in apiClasses) { if (normalizedBase.startsWith(api)) { rowClass = apiClasses[api]; matchedApi = api; break; } }
-      if (rowClass === "default-api") { for (const api of apiPatterns) { if (normalizedBase.includes(api) || normalizedUrl.includes(api)) { rowClass = apiClasses[api]; matchedApi = api; break; } } }
+      for (const api in apiClasses) { 
+        if (normalizedBase.startsWith(api)) { 
+          rowClass = apiClasses[api]; 
+          matchedApi = api; 
+          break; 
+        } 
+      }
+      if (rowClass === "default-api") { 
+        for (const api of apiPatterns) { 
+          if (normalizedBase.includes(api) || normalizedUrl.includes(api)) { 
+            rowClass = apiClasses[api]; 
+            matchedApi = api; 
+            break; 
+          } 
+        } 
+      }
+
+      // incrementa contador
+      apiCounts[rowClass]++;
 
       html += `<tr class="${rowClass}" data-api="${matchedApi}">`;
       html += `<td><div title="${r.timestamp}">${r.timestamp}</div></td>`;
       html += `<td><button class="seeUrlBtn" data-url="${r.url}">SEE FULL URL</button></td>`;
-      allParams.forEach(p => { const val = r.params[p] || ""; html += `<td><div title="${val}">${val}</div></td>`; });
+      allParams.forEach(p => { 
+        const val = r.params[p] || ""; 
+        html += `<td><div title="${val}">${val}</div></td>`; 
+      });
       html += "</tr>";
     });
 
     html += "</tbody></table>";
     document.getElementById("tableContainer").innerHTML = html;
 
+    // atualiza legenda com contadores
+    document.querySelectorAll(".legend-item").forEach(item => {
+      const colorDiv = item.querySelector(".legend-color");
+      if (!colorDiv) return;
+      const cls = [...colorDiv.classList].find(c => apiCounts.hasOwnProperty(c));
+      if (cls) {
+        const count = apiCounts[cls];
+        // substitui texto mantendo nome original + contador
+        const labelText = item.textContent.replace(/\(\d+\)$/, "").trim();
+        item.innerHTML = `<div class="legend-color ${cls}"></div> ${labelText} (${count})`;
+      }
+    });
     const modal = document.getElementById("urlModal");
     const modalPre = document.getElementById("modalURL");
     const copyBtn = document.getElementById("copyBtn");
@@ -267,8 +199,7 @@ document.getElementById("fileInput").addEventListener("change", function(e) {
     window.onclick = (event) => { if(event.target == modal) modal.style.display = "none"; };
   };
   reader.readAsText(file);
-
-});
+  });
   function exportTableToExcel(tableID, filename = 'tabela.xlsx') {
   const table = document.getElementById(tableID);
   if (!table) {
@@ -295,18 +226,6 @@ window.addEventListener("scroll", function() {
 function getClients() {
   return JSON.parse(localStorage.getItem('clients') || '[]');
 }
-
-const footer = document.querySelector('footer');
-if (footer) {
-  const pre = document.createElement('pre');
-  pre.style.background = '#f4f4f4';
-  pre.style.padding = '10px';
-  pre.style.borderRadius = '6px';
-  pre.style.marginTop = '10px';
-  pre.textContent = JSON.stringify(getClients(), null, 2);
-  footer.appendChild(pre);
-}
-
 console.log("Clients from localStorage:", getClients());
 // Atualiza dropdown com clientes do localStorage
 function updateClientDropdown() {
@@ -330,7 +249,7 @@ document.getElementById('addClientBtn').addEventListener('click', () => {
 updateClientDropdown();
 </script>
 
-<footer style="text-align: center; padding: 10px; font-size: 12px; color: #666;">
+<footer>
   <span id="credits"></span>
 </footer>
 </body>

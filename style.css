@@ -1,0 +1,256 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f7f9fc;
+  padding: 0;
+}
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  background: #c6dcff;
+  color: #234376;
+  padding: 10px 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+header img {
+  height: 50px;
+  margin-right: 15px;
+  transition: transform 0.3s ease;
+}
+header h1 {
+  font-size: 26px;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+header.shrink {
+  padding: 5px 2px;
+  max-height: 30px;
+}
+header.shrink img {
+  transform: scale(0.5);
+  transform-origin: right center;
+}
+header.shrink h1 {
+  transform: scale(0.5);
+  transform-origin: left center;
+  margin: 0;
+}
+
+/* Container */
+.container {
+  padding: 20px;
+  max-width: 100%;
+}
+
+/* Inputs & Select */
+#btnsContainer{display: flex; gap: 10px; align-items: center; margin-bottom: 20px;}
+#addClientBtn,
+#fileInput,
+#clientSelect {
+  padding: 8px 12px;
+  border-radius: 6px;
+  background: #fff;
+}
+#addClientBtn {
+  border: none;
+  background: #efefef;
+  color: #636363;
+  cursor: pointer;
+}
+#addClientBtn:hover {
+  background: #636363;
+  color: #efefef;
+}
+#clientSelect {
+  border: 1px solid #ccc;
+}
+#fileInput {
+  border: 1px solid #ccc;
+  display: inline-block;
+}
+#fileInput:hover {
+  border-color: #065182;
+}
+
+/* Legend */
+.legend {
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  background: #fff;
+  padding: 10px 15px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 72px;
+  z-index: 1000;
+}
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+.legend-color {
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  border: 1px solid #666;
+}
+
+/* API Colors */
+.engage { background: #efd0ff; }
+.recs { background: #d3f9d8; }
+.recsClicks { background: #5d8963; }
+.find-click { background: #bbbc94; }
+.find-id { background: #fff3bf; }
+.autocomplete { background: #f6f79f; }
+.personalize { background: #feb2ff; }
+.personalizeClicks { background: #6e3e6f; }
+.default-api { background: #07ebf3; }
+
+/* Table */
+.table-wrapper {
+  overflow-x: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  background: #fff;
+}
+th, td {
+  border: 1px solid #e0e0e0;
+  padding: 8px;
+  font-size: 14px;
+  max-width: 300px;
+}
+th {
+  background: #f0f2f5;
+  position: sticky;
+  top: 40px; /* abaixo da legenda */
+  text-align: left;
+  z-index: 80;
+}
+thead th {
+  top: -12px; /* ajusta conforme a altura real do header + legenda */
+  background: #f0f2f5;
+  z-index: 95;
+}
+td > div {
+  max-width: 280px;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+td > div::-webkit-scrollbar {
+  height: 6px;
+}
+td > div::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.2);
+  border-radius: 3px;
+}
+td > div::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.05);
+}
+/* Página row */
+.page-row td {
+  background: #0a3d62;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 12px;
+}
+
+/* Buttons */
+button {
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 6px;
+  border: none;
+  background: #0a3d62;
+  color: #fff;
+  font-weight: bold;
+  transition: background 0.4s;
+}
+button:hover {
+  background: #065182;
+}
+#exportBtn {
+  display: none;
+  margin-left: 10px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: none;
+  background: #234376;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+#exportBtn:hover {
+  background: #065182;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+}
+.modal-content {
+  background: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 90%;
+  position: relative;
+}
+.modal-content pre {
+  white-space: pre-wrap;
+  word-break: break-word;
+  background: #f4f4f4;
+  padding: 12px;
+  border-radius: 6px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+.modal-close:hover {
+  color: #0a3d62;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 10px;
+  font-size: 12px;
+  color: #666;
+}
