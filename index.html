@@ -180,9 +180,11 @@ document.getElementById("fileInput").addEventListener("change", function(e) {
       const clients = JSON.parse(localStorage.getItem('clients') || '[]');
       const selectedClient = clients.find(c => c.siteName === selectedClientName);
 
+      // Validation
       allParams.forEach(p => { 
         let val = r.params[p] || "";
         let icon = "";
+        let errorMsg = "";
 
         if (selectedClient) {
           // valida apiKey
@@ -198,18 +200,23 @@ document.getElementById("fileInput").addEventListener("change", function(e) {
             }
           }
         }
+
+        // valida campos obrigatórios e valores inválidos
+        if (val === "" && p === "userId") {
+          icon = `<span class="error-icon" title="UserID not Defined">❌</span>`;
+        } else if (val === "anonymous" || val === "undefined") {
+          icon = `<span class="error-icon" title="Invalid Value">❌</span>`;
+        }
+
+        // valida parâmetros obrigatórios de placements
         if (placementApis.includes(matchedApi)) {
           const placement = r.params.placements || "";
           const ruleKey = Object.keys(placementParamRules).find(type => placement.includes(type));
 
           if (ruleKey) {
             placementParamRules[ruleKey].forEach(requiredParam => {
-              if (!allParams.includes(requiredParam)) {
-                // garante que a coluna exista
-                allParams.push(requiredParam);
-              }
+              if (!allParams.includes(requiredParam)) allParams.push(requiredParam);
               if (!r.params[requiredParam]) {
-                // insere ❌ na célula desse parâmetro
                 html = html.replace(
                   `<td><div title=""></div></td>`,
                   `<td><div title="">❌<span class="error-icon" title="Parâmetro '${requiredParam}' obrigatório não encontrado."></span></div></td>`
@@ -218,8 +225,10 @@ document.getElementById("fileInput").addEventListener("change", function(e) {
             });
           }
         }
+
         html += `<td><div title="${val}">${val} ${icon}</div></td>`; 
       });
+
 
 
       html += "</tr>";
