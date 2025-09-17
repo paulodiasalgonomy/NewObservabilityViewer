@@ -110,7 +110,7 @@ header.shrink h1 {
 }
 
 /* API Colors */
-.engage { background: #efd0ff; }
+.engage { background: #ffd0d0; }
 .recs { background: #d3f9d8; }
 .recsClicks { background: #5d8963; }
 .find-click { background: #bbbc94; }
@@ -218,10 +218,11 @@ button:hover {
 }
 .modal-content {
   background: #fff;
-  margin: 10% auto;
+  margin: 3% auto;
   padding: 20px;
   border-radius: 8px;
   width: 90%;
+  height: 90%;
   max-width: 90%;
   position: relative;
 }
@@ -231,7 +232,7 @@ button:hover {
   background: #f4f4f4;
   padding: 12px;
   border-radius: 6px;
-  max-height: 300px;
+  max-height: 90%;
   overflow-y: auto;
 }
 .modal-close {
@@ -246,7 +247,12 @@ button:hover {
 .modal-close:hover {
   color: #0a3d62;
 }
-
+#copyBtn{
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  padding: 10px 20px;
+}
 /* Footer */
 footer {
   text-align: center;

@@ -54,6 +54,7 @@
 </div>
 
 <script>
+/* ====== Configurações ====== */
 const apiClasses = {
   "/rrserver/api/engage/experiences": "engage",
   "/rrserver/api/rrPlatform/recsForPlacements": "recs",
@@ -72,13 +73,54 @@ const placementParamRules = {
   "category_page": ["categoryId"],
   "purchase_complete_page": ["o", "productId", "pp", "q"]
 };
-
 const placementApis = [
   "/rrserver/api/rrPlatform/recsForPlacements",
   "/rrserver/api/personalize"
 ];
+
+/* ====== Função de validação centralizada ====== */
+function validateParam(key, value, baseUrl = '', selectedClient = null) {
+  let status = 'OK';
+  let icon = '✔️';
+  let message = '';
+
+  // Validações gerais
+  if (value === '' && key === 'userId') { status = 'Invalid'; icon = '❌'; message = 'UserID not Defined'; }
+  else if (value === 'anonymous' || value === 'undefined') { status = 'Invalid'; icon = '❌'; message = 'Invalid Value'; }
+
+  // Valida cliente
+  if (selectedClient) {
+    if (key === 'apiKey') {
+      if (value === selectedClient.siteAPIkey) { status='OK'; icon='✔️'; }
+      else { status='Invalid'; icon='❌'; message='Invalid apiKey'; }
+    }
+    if (key === 'apiClientKey') {
+      const match = selectedClient.clientAPIkeys.find(k => k.clientKey === value);
+      if (match) { status='OK'; icon='✔️'; message=`ClientKey: ${match.name}`; }
+      else { status='Invalid'; icon='❌'; message='Invalid apiClientKey'; }
+    }
+  }
+
+  // Valida IP
+  if (key === 'ipor') {
+    const ipv4Pattern = /^(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)){3}$/;
+    if (!ipv4Pattern.test(value)) { status='Invalid'; icon='❌'; message='Invalid IP'; }
+  }
+
+  // Valida placements
+  if (placementApis.some(api => baseUrl.startsWith(api)) && key === 'placements') {
+    const placementTypes = Object.keys(placementParamRules);
+    const hasValid = placementTypes.some(pt => value.includes(pt));
+    if (!hasValid) { status='Invalid'; icon='❌'; message='Invalid placement'; }
+  }
+
+  return { status, icon, message };
+}
+
+/* ====== Processa CSV ====== */
 document.getElementById("fileInput").addEventListener("change", function(e) {
-  const file = e.target.files[0]; if (!file) return;
+  const file = e.target.files[0]; 
+  if (!file) return;
   const reader = new FileReader();
   reader.onload = function(event) {
     document.getElementById("exportBtn").style.display = "inline-block";
@@ -86,18 +128,7 @@ document.getElementById("fileInput").addEventListener("change", function(e) {
     const lines = event.target.result.split(/\r?\n/); 
     const rows = [];
 
-    // contador de requisições por classe
-    const apiCounts = {
-      engage: 0,
-      recs: 0,
-      recsClicks: 0,
-      "find-click": 0,
-      "find-id": 0,
-      autocomplete: 0,
-      personalize: 0,
-      personalizeClicks: 0,
-      "default-api": 0
-    };
+    const apiCounts = Object.fromEntries(Object.values(apiClasses).concat(['recsClicks', 'personalizeClicks','default-api']).map(k=>[k,0]));
 
     lines.forEach(rawLine => {
       const line = rawLine.trim();
@@ -119,7 +150,7 @@ document.getElementById("fileInput").addEventListener("change", function(e) {
         query.split("&").forEach(pair => {
           if (!pair) return;
           const [k, v] = pair.split("=");
-          params[k] = v === undefined ? "" : v;
+          params[k] = v === undefined ? "" : decodeURIComponent(v);
         });
       }
       rows.push({ timestamp, base, url, params });
@@ -131,17 +162,18 @@ document.getElementById("fileInput").addEventListener("change", function(e) {
     }
 
     const allParams = [...new Set(rows.flatMap(r => r.params ? Object.keys(r.params) : []))];
-    let html = "<table id='logs-table'";
-    allParams.forEach(p => { html += ``; });
+    let html = "<table id='logs-table'>";
     html += "<tbody>";
+
+    const selectedClientName = document.getElementById('clientSelect').value;
+    const clients = JSON.parse(localStorage.getItem('clients') || '[]');
+    const selectedClient = clients.find(c => c.siteName === selectedClientName);
 
     rows.forEach(r => {
       if (r.page) { 
         html += `<tr class="page-row"><td colspan="${allParams.length + 2}">${r.page}</td></tr>`;
-        // insere cabeçalho logo depois
-        html += "<tr class='sub-header'>";
-        html += "<th><div>Time</div></th><th><div>URL</div></th>";
-        allParams.forEach(p => { html += `<th><div>${p}</div></th>`; });
+        html += "<tr class='sub-header'><th>Time</th><th>URL</th>";
+        allParams.forEach(p => html += `<th>${p}</th>`); 
         html += "</tr>";
         return; 
       }
@@ -152,126 +184,110 @@ document.getElementById("fileInput").addEventListener("change", function(e) {
       const normalizedUrl = (r.url || "").trim();
 
       for (const api in apiClasses) { 
-        if (normalizedBase.startsWith(api)) { 
-          rowClass = apiClasses[api]; 
-          matchedApi = api; 
-          break; 
-        } 
+        if (normalizedBase.startsWith(api)) { rowClass = apiClasses[api]; matchedApi = api; break; } 
       }
       if (rowClass === "default-api") { 
         for (const api of apiPatterns) { 
           if (normalizedBase.includes(api) || normalizedUrl.includes(api)) { 
-            rowClass = apiClasses[api]; 
-            matchedApi = api; 
-            break; 
+            rowClass = apiClasses[api]; matchedApi = api; break; 
           } 
         } 
       }
 
-      // incrementa contador
       apiCounts[rowClass]++;
 
       html += `<tr class="${rowClass}" data-api="${matchedApi}">`;
-      html += `<td><div title="${r.timestamp}">${r.timestamp}</div></td>`;
-      html += `<td><button class="seeUrlBtn" data-url="${r.url}">SEE FULL URL</button></td>`;
+      html += `<td>${r.timestamp}</td>`;
+      html += `<td><button class="getRequest" data-url="${r.url}">GET REQUEST</button></td>`;
 
-      // Pega cliente selecionado
-      const selectedClientName = document.getElementById('clientSelect').value;
-      const clients = JSON.parse(localStorage.getItem('clients') || '[]');
-      const selectedClient = clients.find(c => c.siteName === selectedClientName);
-
-      // Validation
-      allParams.forEach(p => { 
-        let val = r.params[p] || "";
-        let icon = "";
-        let errorMsg = "";
-
-        if (selectedClient) {
-          // valida apiKey
-          if (p === "apiKey" && val === selectedClient.siteAPIkey) {
-            icon = `<span class="ok-icon" title="apiKey OK">✔️</span>`;
-          }
-
-          // valida apiClientKey
-          if (p === "apiClientKey") {
-            const match = selectedClient.clientAPIkeys.find(k => k.clientKey === val);
-            if (match) {
-              icon = `<span class="ok-icon" title="apiClientKey: ${match.name}">✔️</span>`;
-            }
-          }
-        }
-
-        // valida campos obrigatórios e valores inválidos
-        if (val === "" && p === "userId") {
-          icon = `<span class="error-icon" title="UserID not Defined">❌</span>`;
-        } else if (val === "anonymous" || val === "undefined") {
-          icon = `<span class="error-icon" title="Invalid Value">❌</span>`;
-        }
-
-        // valida parâmetros obrigatórios de placements
-        if (placementApis.includes(matchedApi)) {
-          const placement = r.params.placements || "";
-          const ruleKey = Object.keys(placementParamRules).find(type => placement.includes(type));
-
-          if (ruleKey) {
-            placementParamRules[ruleKey].forEach(requiredParam => {
-              if (!allParams.includes(requiredParam)) allParams.push(requiredParam);
-              if (!r.params[requiredParam]) {
-                html = html.replace(
-                  `<td><div title=""></div></td>`,
-                  `<td><div title="">❌<span class="error-icon" title="Parâmetro '${requiredParam}' obrigatório não encontrado."></span></div></td>`
-                );
-              }
-            });
-          }
-        }
-
-        html += `<td><div title="${val}">${val} ${icon}</div></td>`; 
+      allParams.forEach(p => {
+        const val = r.params[p] || '';
+        const result = validateParam(p, val, matchedApi, selectedClient);
+        html += `<td><div title="${result.message || val}">${val} ${result.icon}</div></td>`; 
       });
-
-
 
       html += "</tr>";
     });
 
-
-      
     html += "</tbody></table>";
     document.getElementById("tableContainer").innerHTML = html;
 
-    // atualiza legenda com contadores
+    // Atualiza legenda com contadores
     document.querySelectorAll(".legend-item").forEach(item => {
       const colorDiv = item.querySelector(".legend-color");
       if (!colorDiv) return;
       const cls = [...colorDiv.classList].find(c => apiCounts.hasOwnProperty(c));
       if (cls) {
         const count = apiCounts[cls];
-        // substitui texto mantendo nome original + contador
         const labelText = item.textContent.replace(/\(\d+\)$/, "").trim();
         item.innerHTML = `<div class="legend-color ${cls}"></div> ${labelText} (${count})`;
       }
     });
-    const modal = document.getElementById("urlModal");
-    const modalPre = document.getElementById("modalURL");
-    const copyBtn = document.getElementById("copyBtn");
-    document.querySelectorAll(".seeUrlBtn").forEach(btn => {
+
+    // ====== Modal GET REQUEST ======
+    document.querySelectorAll(".getRequest").forEach(btn => {
       btn.addEventListener("click", () => {
         const fullUrl = btn.dataset.url;
         const [base, query] = fullUrl.split("?");
-        let formatted = base;
-        if (query) formatted += "\n" + query.split("&").map(p => p.replace(/=/," = ")).join("\n&");
-        modalPre.textContent = formatted;
+        const modal = document.getElementById("urlModal");
+        const modalPre = document.getElementById("modalURL");
+        const copyBtn = document.getElementById("copyBtn");
+
+        let tableHtml = `<table class="modal-table" style="border-collapse: collapse; border: 1px solid #000; width: 100%;">
+          <thead>
+            <tr><th colspan="3" style="border:1px solid #000; padding:4px;">${base}</th></tr>
+            <tr><th style="border:1px solid #000; padding:4px;">Parâmetro</th><th style="border:1px solid #000; padding:4px;">Valor</th><th style="border:1px solid #000; padding:4px;">Status</th></tr>
+          </thead><tbody>`;
+
+        let copyText = `${base}\nParâmetro | Valor | Status\n`;
+
+        if (query) {
+          query.split("&").forEach(pair => {
+            if (!pair) return;
+            const [k, vRaw] = pair.split("=");
+            const v = decodeURIComponent(vRaw || '');
+            const result = validateParam(k, v, base, selectedClient);
+
+            const color = result.status === 'OK' ? 'green' : 'red';
+            tableHtml += `<tr>
+              <td style="border:1px solid #000; padding:4px;">${k}</td>
+              <td style="border:1px solid #000; padding:4px;">${v}</td>
+              <td style="border:1px solid #000; padding:4px; color:${color}; font-weight:bold">${result.status}</td>
+            </tr>`;
+            copyText += `${k} | ${v} | ${result.status}\n`;
+          });
+        }
+
+        tableHtml += `<tr><td>Request</td><td colspan="2">${fullUrl}</td></tr></tbody></table>`;
+        copyText += `Request | ${fullUrl} | \n`;
+
+        modalPre.innerHTML = tableHtml;
         modal.style.display = "block";
-        copyBtn.dataset.text = formatted;
+        copyBtn.dataset.text = copyText;
       });
     });
 
-    copyBtn.onclick = () => { navigator.clipboard.writeText(copyBtn.dataset.text); alert("URL copiada para a área de transferência!"); };
-    document.querySelector(".modal-close").onclick = () => { modal.style.display = "none"; };
-    window.onclick = (event) => { if(event.target == modal) modal.style.display = "none"; };
+    // Copiar modal
+    document.getElementById("copyBtn").onclick = async () => {
+      const modalPre = document.getElementById("modalURL");
+      const html = modalPre.innerHTML;
+      try {
+        await navigator.clipboard.write([
+          new ClipboardItem({
+            "text/html": new Blob([html], { type: "text/html" }),
+            "text/plain": new Blob([modalPre.innerText], { type: "text/plain" })
+          })
+        ]);
+        document.getElementById("copyBtn").style.backgroundColor = "#4CAF50";
+        document.getElementById("copyBtn").textContent = "COPIED!";
+      } catch (err) { alert("Erro ao copiar tabela!"); }
+    };
+
+    document.querySelector(".modal-close").onclick = () => { document.getElementById("urlModal").style.display = "none"; };
+    window.onclick = (event) => { if (event.target == document.getElementById("urlModal")) document.getElementById("urlModal").style.display = "none"; };
   };
   reader.readAsText(file);
-  });
+});
   function exportTableToExcel(tableID, filename = 'tabela.xlsx') {
   const table = document.getElementById(tableID);
   if (!table) {
@@ -282,6 +298,8 @@ document.getElementById("fileInput").addEventListener("change", function(e) {
   let wb = XLSX.utils.table_to_book(table, { sheet: "Sheet1" });
   XLSX.writeFile(wb, filename);
 }
+
+
 window.addEventListener("scroll", function() {
   const header = document.querySelector("header");
   if (window.scrollY > 50) {
@@ -291,10 +309,7 @@ window.addEventListener("scroll", function() {
   } else {
     header.classList.remove("shrink");
   }
-});
-</script>
-<script>
-// Função para ler todos os clientes do localStorage
+});// Função para ler todos os clientes do localStorage
 function getClients() {
   return JSON.parse(localStorage.getItem('clients') || '[]');
 }
